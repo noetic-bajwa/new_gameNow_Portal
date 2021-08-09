@@ -11,6 +11,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.0.3",
+    "@angular/cdk": "^12.1.4",
     "@angular/common": "~12.0.3",
     "@angular/compiler": "~12.0.3",
     "@angular/core": "~12.0.3",
@@ -18,8 +19,18 @@
     "@angular/platform-browser": "~12.0.3",
     "@angular/platform-browser-dynamic": "~12.0.3",
     "@angular/router": "~12.0.3",
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
+    "dom7": "^3.0.0",
+    "jquery": "^3.6.0",
+    "ngx-cookie-service": "^12.0.2",
+    "ngx-owl-carousel-o": "^6.0.0",
+    "ngx-scrolltop": "^2.4.0",
+    "owl.carousel": "^2.3.4",
     "rxjs": "~6.6.0",
-    "tslib": "^2.1.0",
+    "ssr-window": "^3.0.0",
+    "swiper": "^6.8.1",
+    "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

@@ -1,16 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
 html {
     height: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth;  
   }
+
 body {
     position: relative;
     margin: 0;
-    /* padding-bottom: 6rem; */
     min-height: 100%;
-    overflow-x: hidden;
-    
+    overflow-x: hidden; 
   }
+  @import 'swiper-bundle.min.css';
+  
+
+  .owl-theme .owl-nav [class*=owl-] {
+    color: rgb(187, 57, 57);
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #b7575700 !important;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+  color: #8a252c;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #b7575700 !important;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #8a252c;
+}
+
+.swiper-pagination{
+  
+  height: 60px;
+  /* background-color: cadetblue; */
+  padding-top: 50px;
+  
+}
+
+.swiper-button-next{
+  color: #8a252c;
+  display: none;
+}
+
+.swiper-button-prev{
+  color: #8a252c;
+  display: none;
+}
+
+
+.scrolltop-button{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  bottom: 40px !important;
+  cursor: pointer;
+  border: none;
+  transition: opacity .1 linear;
+  z-index: 10000;
+  right: -10px !important;
+  background-color: none !important;
+  box-shadow: none !important;
+  /* box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%); */
+}
+

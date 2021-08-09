@@ -1,0 +1,67 @@
+export const MEMORYGAMES =[
+        {
+        plays: 1,
+        language: "en",
+        title: "Oddbods Pizza Cafe",
+        date_added: "03-12-2021",
+        id: "6495566918844416",
+        icon_large: "http://subscription-cdn.marketjs.com/games/oddbods-pizza-cafe-generic/localization/en/media/graphics/promo/icons/128x128.png",
+        icon_medium: "http://subscription-cdn.marketjs.com/games/oddbods-pizza-cafe-generic/localization/en/media/graphics/promo/icons/96x96.png",
+        url: "https://subscription.marketjs.com/serve?portal_id=5692266857365504&game_id=6495566918844416&branding_id=5169425925799936&ad_id=5185095820378112&portal_localization_id=6207741047603200&clear_cache=yes",
+        banner_large: "http://subscription-cdn.marketjs.com/games/oddbods-pizza-cafe-generic/localization/en/media/graphics/promo/banners/1300x500.jpg",
+        banner_medium: "http://subscription-cdn.marketjs.com/games/oddbods-pizza-cafe-generic/localization/en/media/graphics/promo/banners/440x280.jpg",
+        short_description: "Manage a pizza cafe for the Oddbods",
+        icon_small: "http://subscription-cdn.marketjs.com/games/oddbods-pizza-cafe-generic/localization/en/media/graphics/promo/icons/64x64.png",
+        banner_small: "http://subscription-cdn.marketjs.com/games/oddbods-pizza-cafe-generic/localization/en/media/graphics/promo/banners/180x120.jpg",
+        long_description: "The Oddbods are back, and they are hungry. Watch as Fuse, Slick, Bubbles, Zee, Pogo, Jeff and Newt make funny faces while you satisfy their cravings at this all-new Pizza Cafe game. Refer to the recipe cookbook, prepare the pizzas, and serve the Oddbods. Delight them in time, and receive a good tip! Features: - interactive tutorial to learn the ropes - 12 delicious ingredients - onions, pepperoni, bacon, tomatoes, ham and more! - 12 delicious pizza recipes - cheese, pepperoni, hawaiian, meat lovers, veggie delight and more! - learn how to manage a pizza cafe. Refer to recipes, make the pizza with the correct ingredients, and order more ingredients using the cash earned."
+        },
+        {
+        plays: 11,
+        language: "en",
+        title: "Sort the Trash",
+        date_added: "03-12-2021",
+        id: "6317311196659712",
+        icon_large: "http://subscription-cdn.marketjs.com/games/sort-the-trash/localization/en/media/graphics/promo/icons/128x128.png",
+        icon_medium: "http://subscription-cdn.marketjs.com/games/sort-the-trash/localization/en/media/graphics/promo/icons/96x96.png",
+        url: "https://subscription.marketjs.com/serve?portal_id=5692266857365504&game_id=6317311196659712&branding_id=5169425925799936&ad_id=5185095820378112&portal_localization_id=6207741047603200&clear_cache=yes",
+        banner_large: "http://subscription-cdn.marketjs.com/games/sort-the-trash/localization/en/media/graphics/promo/banners/1300x500.jpg",
+        banner_medium: "http://subscription-cdn.marketjs.com/games/sort-the-trash/localization/en/media/graphics/promo/banners/440x280.jpg",
+        short_description: "Collect recyclable items, avoid contaminators",
+        icon_small: "http://subscription-cdn.marketjs.com/games/sort-the-trash/localization/en/media/graphics/promo/icons/64x64.png",
+        banner_small: "http://subscription-cdn.marketjs.com/games/sort-the-trash/localization/en/media/graphics/promo/banners/180x120.jpg",
+        long_description: "Protect the environment by learning how to recycle correctly. Collect items that can be recycled only. Avoid collecting contaminators such as organic waste, disposable coffee cups, plastic straws, ceramic dishware and lithium ion batteries. Go green and save the Earth. Start becoming eco-friendly today! Features: - Simple elegant design - Responsive design - Positive them with recycling facts"
+        },
+        {
+        plays: 2,
+        language: "en",
+        title: "Positive Reinforcement",
+        date_added: "03-12-2021",
+        id: "5169664796655616",
+        icon_large: "http://subscription-cdn.marketjs.com/games/positive-reinforcement/localization/en/media/graphics/promo/icons/128x128.png",
+        icon_medium: "http://subscription-cdn.marketjs.com/games/positive-reinforcement/localization/en/media/graphics/promo/icons/96x96.png",
+        url: "https://subscription.marketjs.com/serve?portal_id=5692266857365504&game_id=5169664796655616&branding_id=5169425925799936&ad_id=5185095820378112&portal_localization_id=6207741047603200&clear_cache=yes",
+        banner_large: "http://subscription-cdn.marketjs.com/games/positive-reinforcement/localization/en/media/graphics/promo/banners/1300x500.jpg",
+        banner_medium: "http://subscription-cdn.marketjs.com/games/positive-reinforcement/localization/en/media/graphics/promo/banners/440x280.jpg",
+        short_description: "Collect positive words, avoid negative ones",
+        icon_small: "http://subscription-cdn.marketjs.com/games/positive-reinforcement/localization/en/media/graphics/promo/icons/64x64.png",
+        banner_small: "http://subscription-cdn.marketjs.com/games/positive-reinforcement/localization/en/media/graphics/promo/banners/180x120.jpg",
+        long_description: "These are tough times, but we can all do something to stay positive. Drag and move the basket to collect positive words. Avoid negative words at all cost! Learn new positive words and expand your vocabulary at the same time. Features: - Upbeat and modern theme - Great inspiration music - Easy controls for desktop and mobile users This game is great for businesses exploring digital therapeutics, wellness and corporate engagement training programmes."
+        },
+        {
+        plays: 6,
+        language: "en",
+        title: "Seashore Treasure",
+        date_added: "03-12-2021",
+        id: "6651232438452224",
+        icon_large: "http://subscription-cdn.marketjs.com/games/seashore-treasure/localization/en/media/graphics/promo/icons/128x128.png",
+        icon_medium: "http://subscription-cdn.marketjs.com/games/seashore-treasure/localization/en/media/graphics/promo/icons/96x96.png",
+        url: "https://subscription.marketjs.com/serve?portal_id=5692266857365504&game_id=6651232438452224&branding_id=5169425925799936&ad_id=5185095820378112&portal_localization_id=6207741047603200&clear_cache=yes",
+        banner_large: "http://subscription-cdn.marketjs.com/games/seashore-treasure/localization/en/media/graphics/promo/banners/1300x500.jpg",
+        banner_medium: "http://subscription-cdn.marketjs.com/games/seashore-treasure/localization/en/media/graphics/promo/banners/440x280.jpg",
+        short_description: "A memory training game",
+        icon_small: "http://subscription-cdn.marketjs.com/games/seashore-treasure/localization/en/media/graphics/promo/icons/64x64.png",
+        banner_small: "http://subscription-cdn.marketjs.com/games/seashore-treasure/localization/en/media/graphics/promo/banners/180x120.jpg",
+        long_description: "Tap an item to pick it up. Next, pick up a new item that you haven't picked up before. Continue doing so, until you reach the limit. Pick up cool items such as sun shades, sea shells, turtles, jellyfish, shorts, sun screen, fish, seahorses and more. Features: - Fun, relaxed beach and sunny theme - Measure your cognitive ability and improve your memory - 3 different beaches - Beautiful sea shore graphics and animation"
+        }
+        
+]

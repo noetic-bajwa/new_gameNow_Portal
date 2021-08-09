@@ -1,0 +1,39 @@
+.myNav{
+    background-color: rgba(0, 0, 0, 0.863);
+}
+
+
+/* menu */
+
+.footer {
+    position: relative;
+    padding: 15px;
+    right: 0;
+    /* bottom: -5px; */
+    left: 0;
+    text-align: center;
+    font-size: 12px;
+    background-color: #8a252c;
+  }
+
+  @media screen and (max-width: 480px) {
+    .footer {
+        position: fixed;
+        padding: 0px;
+        right: 0;
+        bottom: 0px;
+        left: 0;
+        padding: 0.1rem;
+        text-align: center;
+        font-size: 12px;
+       z-index: 99999;
+      }
+  }
+ 
+  a{
+      color: white;
+  }
+
+
+ 
+

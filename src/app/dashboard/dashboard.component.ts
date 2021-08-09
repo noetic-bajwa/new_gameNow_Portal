@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+declare let AOS: any;
 
 @Component({
   selector: 'app-dashboard',
@@ -8,11 +9,13 @@ import { Title } from '@angular/platform-browser';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private pageTitle:Title) { 
+  constructor(private pageTitle:Title ) { 
     this.pageTitle.setTitle('GAME NOW - GAMING NEVER STOPS');
+    AOS.init();
   }
 
   ngOnInit(): void {
-  }
+    
 
+}
 }
