@@ -16,6 +16,7 @@ body {
     overflow-x: hidden; 
   }
   @import 'swiper-bundle.min.css';
+  @import 'swiper/components/pagination/pagination';
   
 
   .owl-theme .owl-nav [class*=owl-] {
