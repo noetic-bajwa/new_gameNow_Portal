@@ -11,7 +11,7 @@
         <div class="col-12 col-md-4 col-lg-4 " data-aos="flip-left">
             <div class="text-center">
         
-                <h4 class="myHeading">ACTION GAMES</h4>
+                <h5 class="myHeading">ACTION GAMES</h5>
             
             </div>
             <swiper
@@ -46,7 +46,7 @@
         <div class="col-12 col-md-4 col-lg-4 " data-aos="flip-left">
             <div class="text-center">
         
-                <h4 class="myHeading">ADVENTURE GAMES</h4>
+                <h5 class="myHeading">ADVENTURE GAMES</h5>
             
             </div>
             <swiper
@@ -82,7 +82,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h4 class="myHeading">BOARD GAMES</h4>
+                <h5 class="myHeading">BOARD GAMES</h5>
             
             </div>
             <swiper
@@ -127,7 +127,7 @@
         <div class="col-12 col-md-4 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h4 class="myHeading">SPORTS GAMES</h4>
+                <h5 class="myHeading">SPORTS GAMES</h5>
             
             </div>
             <swiper
@@ -166,7 +166,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h4 class="myHeading">CARD GAMES</h4>
+                <h5 class="myHeading">CARD GAMES</h5>
             
             </div>
             <swiper
@@ -200,7 +200,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h4 class="myHeading">EDUCATIONAL GAMES</h4>
+                <h5 class="myHeading">EDUCATIONAL GAMES</h5>
             
             </div>
             <swiper
@@ -236,7 +236,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h4 class="myHeading">FAMILY GAMES</h4>
+                <h5 class="myHeading">FAMILY GAMES</h5>
             
             </div>
             <swiper
@@ -279,7 +279,7 @@
         <div class="col-12 col-md-4 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h4 class="myHeading">STRATEGY GAMES</h4>
+                <h5 class="myHeading">STRATEGY GAMES</h5>
             
             </div>
             <swiper
@@ -302,5 +302,118 @@
 
         
         
+    </div>
+  </div>
+
+
+  <div class="container">
+    
+    
+    
+    <div class="row" style="justify-content: center;">
+
+        <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
+            <div class="text-center">
+        
+                <h5 class="myHeading">MEMORY GAMES</h5>
+            
+            </div>
+            <swiper
+                [effect]="'cube'"
+                [grabCursor]="true"
+                [loop]="true"
+                [autoplay]="{
+                delay: 300000,
+                disableOnInteraction: true
+                }"
+                [cubeEffect]="{
+                shadow: false,
+                slideShadows: false,
+                shadowOffset: 20,
+                shadowScale: 0.94
+                }"
+                [pagination]="{
+                    dynamicBullets: true
+                  }"
+                class=""
+            >
+            <ng-template swiperSlide *ngFor="let game of MemoryGames;">
+                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                    <div class="text-center"> 
+                        <p class="gameTitle">{{game.title}}</p>
+                    </div>      
+            </ng-template>
+            </swiper>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
+            <div class="text-center">
+        
+                <h5 class="myHeading">WORD GAMES</h5>
+            
+            </div>
+            <swiper
+            [loop]="true"
+            [effect]="'flip'"
+            [grabCursor]="true"
+            [pagination]="true"
+            [navigation]="true"
+            [flipEffect]="{
+              
+              slideShadows: false
+            }"
+
+            [autoplay]="{
+              delay: 300000,
+              disableOnInteraction: true
+            }"
+            [pagination]="{
+                dynamicBullets: true
+              }"
+            class=""
+          
+          >
+            <ng-template swiperSlide *ngFor="let game of WordGames;">
+                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                    <div class="text-center"> 
+                        <p class="gameTitle">{{game.title}}</p>
+                    </div>      
+            </ng-template>
+            </swiper>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
+            <div class="text-center">
+        
+                <h5 class="myHeading">MULTIPLAYER GAMES</h5>
+            
+            </div>
+            <swiper
+                [effect]="'cube'"
+                [grabCursor]="true"
+                [loop]="true"
+                [autoplay]="{
+                delay: 300000,
+                disableOnInteraction: true
+                }"
+                [cubeEffect]="{
+                shadow: false,
+                slideShadows: false,
+                shadowOffset: 20,
+                shadowScale: 0.94
+                }"
+                [pagination]="{
+                    dynamicBullets: true
+                  }"
+                class=""
+            >
+            <ng-template swiperSlide *ngFor="let game of MultiplayerGames;">
+                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                    <div class="text-center"> 
+                        <p class="gameTitle">{{game.title}}</p>
+                    </div>      
+            </ng-template>
+            </swiper>
+        </div>
     </div>
   </div>
