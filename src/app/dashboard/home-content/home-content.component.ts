@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { AuthenticationGuard } from '../../authentication.guard';
+
 import { ACTIONGAMES } from '../../GAMES/actionGames';
+import { FEATUREDGAMES } from '../../GAMES/featuredGames';
+import { LEADERBOARDGAMES } from '../../GAMES/leaderBoardGames';
 import { ADVENTUREGAMES } from '../../GAMES/adventureGames';
 import { BOARDGAMES } from '../../GAMES/boardGames';
 import { CARDGAMES } from '../../GAMES/cardGames';
@@ -12,6 +15,10 @@ import { STRATEGYGAMES } from '../../GAMES/strategyGames';
 import { WORDGAMES } from '../../GAMES/wordGames';
 import { MEMORYGAMES } from '../../GAMES/memoryGames';
 import { MULTIPLAYERGAMES } from '../../GAMES/multiplayerGames';
+import { PUZZLEGAMES } from '../../GAMES/puzzleGames';
+import { POPULARGAMES } from '../../GAMES/popularGames';
+import { RECOMMENDEDGAMES } from '../../GAMES/recommendedGames';
+
 
 
 import SwiperCore, {  Autoplay, EffectCoverflow,EffectCube,EffectFlip, Pagination } from "swiper/core";
@@ -25,6 +32,9 @@ declare let AOS: any;
   styleUrls: ['./home-content.component.css']
 })
 export class HomeContentComponent implements OnInit {
+
+  FeaturedGames = FEATUREDGAMES;
+  LeaderBoardGames = LEADERBOARDGAMES;
   
   ActionGames=ACTIONGAMES;
   AdventureGames=ADVENTUREGAMES;
@@ -36,8 +46,10 @@ export class HomeContentComponent implements OnInit {
   StrategyGames = STRATEGYGAMES;
   WordGames = WORDGAMES;
   MemoryGames = MEMORYGAMES;
-  MultiplayerGames = MULTIPLAYERGAMES
-
+  MultiplayerGames = MULTIPLAYERGAMES;
+  PuzzleGames = PUZZLEGAMES;
+  PopularGames = PUZZLEGAMES;
+  RecommendedGames = RECOMMENDEDGAMES;
   
   constructor( private gamesData:DataService,private authService:AuthenticationGuard) { }
 

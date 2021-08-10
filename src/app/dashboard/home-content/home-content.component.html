@@ -1,10 +1,123 @@
-<!-- <app-carousel></app-carousel> -->
-<!-- <app-feature-games></app-feature-games>
-<app-leader-board-games></app-leader-board-games>
-<app-categories></app-categories> -->
+<!-- FEATURED GAMES -->
 
 
-<div class="container">
+<div class="container" style="overflow-x: hidden;overflow-y:hidden;">
+    
+    <div class="row" style="justify-content: center;" >
+
+        <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
+            <div class="text-center">
+        
+                <h5 class="myHeading">FEATURED GAMES</h5>
+            
+            </div>
+            <swiper
+            [effect]="'coverflow'"
+            [grabCursor]="true"
+            [loop]="true"
+            [centeredSlides]="true"
+            [slidesPerView]="3"
+            [coverflowEffect]="{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false
+            }"
+            [pagination]="true"
+            class="mySwiper"
+            >
+            <ng-template swiperSlide *ngFor="let game of FeaturedGames;">
+                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                    <div class="text-center"> 
+                        <p class="gameTitle">{{game.title}}</p>
+                    </div>      
+            </ng-template>
+            </swiper>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- LEADERBOARD GAMES -->
+
+
+<div class="container" style="overflow-x: hidden;overflow-y:hidden;">
+    
+    <div class="row" style="justify-content: center;" >
+
+        <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
+            <div class="text-center">
+        
+                <h5 class="myHeading">LEADERBOARD GAMES</h5>
+            
+            </div>
+            <swiper
+            [effect]="'coverflow'"
+            [grabCursor]="true"
+            [loop]="true"
+            [centeredSlides]="true"
+            [slidesPerView]="3"
+            [coverflowEffect]="{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false
+            }"
+            [pagination]="true"
+            class="mySwiper"
+            >
+            <ng-template swiperSlide *ngFor="let game of LeaderBoardGames;">
+                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                    <div class="text-center"> 
+                        <p class="gameTitle">{{game.title}}</p>
+                    </div>      
+            </ng-template>
+            </swiper>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- POPULAR GAMES -->
+<div class="container" style="overflow-x: hidden;overflow-y:hidden;">
+    
+    <div class="row" style="justify-content: center;" >
+
+        <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
+            <div class="text-center">
+        
+                <h5 class="myHeading">POPULAR GAMES</h5>
+            
+            </div>
+            <swiper
+            [slidesPerView]="3"
+            [slidesPerColumn]="1"
+            [spaceBetween]="20"
+            [loop]="true"
+            [pagination]="{
+                dynamicBullets: true
+              }"
+            class="mySwiper"
+            >
+            <ng-template swiperSlide *ngFor="let game of StrategyGames;">
+                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                    <div class="text-center"> 
+                        <p class="gameTitle">{{game.title}}</p>
+                    </div>      
+            </ng-template>
+            </swiper>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container" style="overflow-y: hidden;overflow-x: hidden;">
 
     <div class="row" style="justify-content: center;">
   
@@ -113,7 +226,7 @@
             </swiper>
         </div>
     </div>
-  </div>
+</div>
 
 
 
@@ -124,7 +237,7 @@
     <div class="row" style="justify-content: center;">
 
         
-        <div class="col-12 col-md-4 col-lg-12" data-aos="flip-left">
+        <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
                 <h5 class="myHeading">SPORTS GAMES</h5>
@@ -276,7 +389,7 @@
     <div class="row" style="justify-content: center;" >
 
         
-        <div class="col-12 col-md-4 col-lg-12" data-aos="flip-left">
+        <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
                 <h5 class="myHeading">STRATEGY GAMES</h5>
@@ -415,5 +528,81 @@
             </ng-template>
             </swiper>
         </div>
+    </div>
+  </div>
+
+  <div class="container">
+    
+    
+    
+    <div class="row" style="justify-content: center;" >
+
+        
+        <div class="col-12 col-md-4 col-lg-12" data-aos="flip-left">
+            <div class="text-center">
+        
+                <h5 class="myHeading">PUZZLE GAMES</h5>
+            
+            </div>
+            <swiper
+            [slidesPerView]="3"
+            [slidesPerColumn]="1"
+            [spaceBetween]="20"
+            [pagination]="{
+                dynamicBullets: true
+              }"
+            class="mySwiper"
+            >
+            <ng-template swiperSlide *ngFor="let game of PuzzleGames;">
+                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                    <div class="text-center"> 
+                        <p class="gameTitle">{{game.title}}</p>
+                    </div>      
+            </ng-template>
+            </swiper>
+        </div>
+
+        
+        
+    </div>
+  </div>
+
+
+
+
+  <!-- Recommended Games -->
+  <div class="container">
+    
+    
+    
+    <div class="row" style="justify-content: center;" >
+
+        
+        <div class="col-12 col-md-4 col-lg-12" data-aos="flip-left">
+            <div class="text-center">
+        
+                <h5 class="myHeading">RECOMMENDED GAMES</h5>
+            
+            </div>
+            <swiper
+            [slidesPerView]="3"
+            [slidesPerColumn]="1"
+            [spaceBetween]="20"
+            [pagination]="{
+                dynamicBullets: true
+              }"
+            class=""
+            >
+            <ng-template swiperSlide *ngFor="let game of RecommendedGames;">
+                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                    <div class="text-center"> 
+                        <p class="gameTitle">{{game.title}}</p>
+                    </div>      
+            </ng-template>
+            </swiper>
+        </div>
+
+        
+        
     </div>
   </div>
