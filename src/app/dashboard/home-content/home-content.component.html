@@ -4,22 +4,18 @@
 <app-categories></app-categories> -->
 
 
-
-
 <div class="container">
-    
-    
-    
-    <div class="row" style="justify-content: center;">
 
-        
-        <div class="col-12 col-md-4 col-lg-4 ">
+    <div class="row" style="justify-content: center;">
+  
+        <div class="col-12 col-md-4 col-lg-4 " data-aos="flip-left">
             <div class="text-center">
         
                 <h4 class="myHeading">ACTION GAMES</h4>
             
             </div>
             <swiper
+                
                 [effect]="'cube'"
                 [grabCursor]="true"
                 [loop]="true"
@@ -47,7 +43,7 @@
             </swiper>
         </div>
 
-        <div class="col-12 col-md-4 col-lg-4 ">
+        <div class="col-12 col-md-4 col-lg-4 " data-aos="flip-left">
             <div class="text-center">
         
                 <h4 class="myHeading">ADVENTURE GAMES</h4>
@@ -83,10 +79,164 @@
             </swiper>
         </div>
 
-        <div class="col-12 col-md-4 col-lg-4 ">
+        <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
                 <h4 class="myHeading">BOARD GAMES</h4>
+            
+            </div>
+            <swiper
+                [effect]="'cube'"
+                [grabCursor]="true"
+                [loop]="true"
+                [autoplay]="{
+                delay: 300000,
+                disableOnInteraction: true
+                }"
+                [cubeEffect]="{
+                shadow: false,
+                slideShadows: false,
+                shadowOffset: 20,
+                shadowScale: 0.94
+                }"
+                [pagination]="{
+                    dynamicBullets: true
+                  }"
+                class=""
+            >
+            <ng-template swiperSlide *ngFor="let game of BoardGames;">
+                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                    <div class="text-center"> 
+                        <p class="gameTitle">{{game.title}}</p>
+                    </div>      
+            </ng-template>
+            </swiper>
+        </div>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    
+    
+    
+    <div class="row" style="justify-content: center;">
+
+        
+        <div class="col-12 col-md-4 col-lg-12" data-aos="flip-left">
+            <div class="text-center">
+        
+                <h4 class="myHeading">SPORTS GAMES</h4>
+            
+            </div>
+            <swiper
+            [slidesPerView]="3"
+            [slidesPerColumn]="1"
+            [spaceBetween]="20"
+            [pagination]="{
+                dynamicBullets: true
+              }"
+            class="mySwiper"
+            >
+            <ng-template swiperSlide *ngFor="let game of SportsGames;">
+                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                    <div class="text-center"> 
+                        <p class="gameTitle">{{game.title}}</p>
+                    </div>      
+            </ng-template>
+            </swiper>
+        </div>
+
+        
+        
+    </div>
+  </div>
+
+
+
+
+  <div class="container">
+    
+    
+    
+    <div class="row" style="justify-content: center;">
+
+        
+        <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
+            <div class="text-center">
+        
+                <h4 class="myHeading">CARD GAMES</h4>
+            
+            </div>
+            <swiper
+                [effect]="'cube'"
+                [grabCursor]="true"
+                [loop]="true"
+                [autoplay]="{
+                delay: 300000,
+                disableOnInteraction: true
+                }"
+                [cubeEffect]="{
+                shadow: false,
+                slideShadows: false,
+                shadowOffset: 20,
+                shadowScale: 0.94
+                }"
+                [pagination]="{
+                    dynamicBullets: true
+                  }"
+                class=""
+            >
+            <ng-template swiperSlide *ngFor="let game of ActionGames;">
+                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                    <div class="text-center"> 
+                        <p class="gameTitle">{{game.title}}</p>
+                    </div>      
+            </ng-template>
+            </swiper>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
+            <div class="text-center">
+        
+                <h4 class="myHeading">EDUCATIONAL GAMES</h4>
+            
+            </div>
+            <swiper
+            [loop]="true"
+            [effect]="'flip'"
+            [grabCursor]="true"
+            [pagination]="true"
+            [navigation]="true"
+            [flipEffect]="{
+              
+              slideShadows: false
+            }"
+
+            [autoplay]="{
+              delay: 300000,
+              disableOnInteraction: true
+            }"
+            [pagination]="{
+                dynamicBullets: true
+              }"
+            class=""
+          
+          >
+            <ng-template swiperSlide *ngFor="let game of AdventureGames;">
+                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                    <div class="text-center"> 
+                        <p class="gameTitle">{{game.title}}</p>
+                    </div>      
+            </ng-template>
+            </swiper>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
+            <div class="text-center">
+        
+                <h4 class="myHeading">FAMILY GAMES</h4>
             
             </div>
             <swiper
@@ -123,71 +273,25 @@
     
     
     
-    <div class="row" style="justify-content: center;">
+    <div class="row" style="justify-content: center;" >
 
         
-        <div class="col-12 col-md-4 col-lg-4 ">
+        <div class="col-12 col-md-4 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h4 class="myHeading">CARD GAMES</h4>
+                <h4 class="myHeading">STRATEGY GAMES</h4>
             
             </div>
             <swiper
-                [effect]="'cube'"
-                [grabCursor]="true"
-                [loop]="true"
-                [autoplay]="{
-                delay: 300000,
-                disableOnInteraction: true
-                }"
-                [cubeEffect]="{
-                shadow: false,
-                slideShadows: false,
-                shadowOffset: 20,
-                shadowScale: 0.94
-                }"
-                [pagination]="{
-                    dynamicBullets: true
-                  }"
-                class=""
-            >
-            <ng-template swiperSlide *ngFor="let game of ActionGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
-            </ng-template>
-            </swiper>
-        </div>
-
-        <div class="col-12 col-md-4 col-lg-4 ">
-            <div class="text-center">
-        
-                <h4 class="myHeading">EDUCATIONAL GAMES</h4>
-            
-            </div>
-            <swiper
-            [loop]="true"
-            [effect]="'flip'"
-            [grabCursor]="true"
-            [pagination]="true"
-            [navigation]="true"
-            [flipEffect]="{
-              
-              slideShadows: false
-            }"
-
-            [autoplay]="{
-              delay: 300000,
-              disableOnInteraction: true
-            }"
+            [slidesPerView]="3"
+            [slidesPerColumn]="1"
+            [spaceBetween]="20"
             [pagination]="{
                 dynamicBullets: true
               }"
-            class=""
-          
-          >
-            <ng-template swiperSlide *ngFor="let game of AdventureGames;">
+            class="mySwiper"
+            >
+            <ng-template swiperSlide *ngFor="let game of StrategyGames;">
                     <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                     <div class="text-center"> 
                         <p class="gameTitle">{{game.title}}</p>
@@ -196,38 +300,7 @@
             </swiper>
         </div>
 
-        <div class="col-12 col-md-4 col-lg-4 ">
-            <div class="text-center">
         
-                <h4 class="myHeading">FAMILY GAMES</h4>
-            
-            </div>
-            <swiper
-                [effect]="'cube'"
-                [grabCursor]="true"
-                [loop]="true"
-                [autoplay]="{
-                delay: 300000,
-                disableOnInteraction: true
-                }"
-                [cubeEffect]="{
-                shadow: false,
-                slideShadows: false,
-                shadowOffset: 20,
-                shadowScale: 0.94
-                }"
-                [pagination]="{
-                    dynamicBullets: true
-                  }"
-                class=""
-            >
-            <ng-template swiperSlide *ngFor="let game of BoardGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
-            </ng-template>
-            </swiper>
-        </div>
+        
     </div>
   </div>

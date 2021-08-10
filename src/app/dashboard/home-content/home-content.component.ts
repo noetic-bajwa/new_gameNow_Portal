@@ -7,6 +7,8 @@ import { BOARDGAMES } from '../../GAMES/boardGames';
 import { CARDGAMES } from '../../GAMES/cardGames';
 import { EDUCATIONALGAMES } from '../../GAMES/educationalGames';
 import { FAMILYGAMES } from '../../GAMES/familyGames';
+import { SPORTSGAMES } from '../../GAMES/sportsGames';
+import { STRATEGYGAMES } from '../../GAMES/strategyGames';
 
 
 import SwiperCore, {  Autoplay, EffectCoverflow,EffectCube,EffectFlip, Pagination } from "swiper/core";
@@ -27,6 +29,8 @@ export class HomeContentComponent implements OnInit {
   CardGames = CARDGAMES;
   EducationalGames = EDUCATIONALGAMES;
   FamilyGames = FAMILYGAMES;
+  SportsGames = SPORTSGAMES;
+  StrategyGames = STRATEGYGAMES;
 
   
   constructor( private gamesData:DataService,private authService:AuthenticationGuard) { }
