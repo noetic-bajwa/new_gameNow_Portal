@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ACTIONGAMES } from '../../../../GAMES/actionGames';
+
+
+import SwiperCore, {  Autoplay, EffectCoverflow,EffectCube,EffectFlip, Pagination } from "swiper/core";
+
+SwiperCore.use([Autoplay,EffectCube,EffectCoverflow,EffectFlip, Pagination]);
+declare let AOS: any;
+
 @Component({
   selector: 'app-action',
   templateUrl: './action.component.html',
@@ -10,6 +17,7 @@ export class ActionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    AOS.init();
   }
 
 }

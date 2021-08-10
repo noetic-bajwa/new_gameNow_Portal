@@ -79,3 +79,43 @@ h5{
 }
 
 
+@font-face{
+    font-family:"EvolveSansThin";
+    src:local("EvolveSansThin"),url(/assets/Fonts/MADE_Evolve_Sans_Thin.otf) format("truetype");
+}
+
+@font-face{
+    font-family:"EvolveSansRegularEVO";
+    src:local("EvolveSansRegularEVO"),url(/assets/Fonts/MADE_Evolve_Sans_Regular_EVO.otf) format("truetype");
+}
+  
+@font-face{
+    font-family:"EvolveSansMedium";
+    src:local("EvolveSansMedium"),url(/assets/Fonts/MADE_Evolve_Sans_Medium.otf) format("truetype");
+}
+
+@font-face{
+    font-family:"EvolveSansBold";
+    src:local("EvolveSansBold"),url(/assets/Fonts/MADE_Evolve_Sans_Bold.otf) format("truetype");
+}
+        
+       
+.myHeading{
+    font-family:"EvolveSansThin";
+    letter-spacing: 0.1em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #c0302d;
+    color: white;
+    justify-content: center;
+    
+}
+    
+.gameTitle{
+    font-family:"EvolveSansThin";
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-weight:bold;
+}
+

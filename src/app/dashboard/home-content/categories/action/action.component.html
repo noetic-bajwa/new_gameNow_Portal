@@ -1,1 +1,41 @@
-<p>action works!</p>
+<div class="container">
+    
+    <div class="text-center">
+        
+        <h4 class="myHeading">ACTION GAMES</h4>
+    
+    </div>
+    
+    <div class="row" style="justify-content: center;">
+        
+        <div class="col-12 col-md-4 col-lg-4 ">
+            <swiper
+                [effect]="'cube'"
+                [grabCursor]="true"
+                [loop]="true"
+                [autoplay]="{
+                delay: 3000,
+                disableOnInteraction: true
+                }"
+                [cubeEffect]="{
+                shadow: false,
+                slideShadows: false,
+                shadowOffset: 20,
+                shadowScale: 0.94
+                }"
+                [pagination]="{
+                    dynamicBullets: true
+                  }"
+                class=""
+            >
+            <ng-template swiperSlide *ngFor="let game of Games;">
+                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                    <div class="text-center"> 
+                        <p class="gameTitle">{{game.title}}</p>
+                    </div>      
+            </ng-template>
+            </swiper>
+        </div>
+
+    </div>
+  </div>

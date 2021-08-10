@@ -44,14 +44,11 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #8a252c;
+  background-color: #c0302d;
 }
 
 .swiper-pagination{
   
-  height: 60px;
-  /* background-color: cadetblue; */
-  padding-top: 50px;
   
 }
 
