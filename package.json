@@ -26,7 +26,6 @@
     "ngx-cookie-service": "^12.0.2",
     "ngx-owl-carousel-o": "^6.0.0",
     "ngx-scrolltop": "^2.4.0",
-    "owl.carousel": "^2.3.4",
     "rxjs": "~6.6.0",
     "ssr-window": "^3.0.0",
     "swiper": "^6.8.1",

@@ -19,11 +19,10 @@ import { PUZZLEGAMES } from '../../GAMES/puzzleGames';
 import { POPULARGAMES } from '../../GAMES/popularGames';
 import { RECOMMENDEDGAMES } from '../../GAMES/recommendedGames';
 
+import SwiperCore, {Lazy,  Autoplay, EffectCoverflow,EffectCube,EffectFlip, Pagination } from "swiper/core";
 
+SwiperCore.use([Lazy, Autoplay,EffectCube,EffectCoverflow,EffectFlip, Pagination]);
 
-import SwiperCore, {  Autoplay, EffectCoverflow,EffectCube,EffectFlip, Pagination } from "swiper/core";
-
-SwiperCore.use([Autoplay,EffectCube,EffectCoverflow,EffectFlip, Pagination]);
 declare let AOS: any;
 
 @Component({

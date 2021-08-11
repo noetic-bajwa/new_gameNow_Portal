@@ -8,24 +8,18 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">FEATURED GAMES</h5>
+                <h5 class="myHeading"><i class="fa fa-bookmark myGameIcon"></i>FEATURED GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                
             
             </div>
             <swiper
-            [effect]="'coverflow'"
-            [grabCursor]="true"
-            [loop]="true"
-            [centeredSlides]="true"
-            [slidesPerView]="2"
-            [coverflowEffect]="{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false
-            }"
-            [pagination]="true"
-            class="mySwiper"
+            [slidesPerView]="3"
+            [slidesPerColumn]="1"
+            [spaceBetween]="20"
+            [pagination]="{
+                dynamicBullets: false
+              }"
+            class=""
             >
             <ng-template swiperSlide *ngFor="let game of FeaturedGames;">
                     <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
@@ -41,7 +35,7 @@
 
 
 
-<!-- LEADERBOARD GAMES -->
+
 
 
 <div class="container" style="overflow-x: hidden;overflow-y:hidden;">
@@ -51,24 +45,17 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">LEADERBOARD GAMES</h5>
+                <h5 class="myHeading"><i class="fa fa-trophy myGameIcon"></i>LEADERBOARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
-            [effect]="'coverflow'"
-            [grabCursor]="true"
-            [loop]="true"
-            [centeredSlides]="true"
-            [slidesPerView]="2"
-            [coverflowEffect]="{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false
-            }"
-            [pagination]="true"
-            class="mySwiper"
+            [slidesPerView]="3"
+            [slidesPerColumn]="1"
+            [spaceBetween]="20"
+            [pagination]="{
+                dynamicBullets: false
+              }"
+            class=""
             >
             <ng-template swiperSlide *ngFor="let game of LeaderBoardGames;">
                     <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
@@ -83,7 +70,7 @@
 </div>
 
 
-<!-- POPULAR GAMES -->
+
 <div class="container" style="overflow-x: hidden;overflow-y:hidden;">
     
     <div class="row" style="justify-content: center;" >
@@ -91,7 +78,7 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">POPULAR GAMES</h5>
+                <h5 class="myHeading"><i class="fas fa-star myGameIcon"></i>POPULAR GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -124,7 +111,7 @@
         <div class="col-12 col-md-4 col-lg-4 " data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">ACTION GAMES</h5>
+                <h5 class="myHeading"><i class="fa fa-crosshairs myGameIcon"></i>ACTION GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -159,7 +146,7 @@
         <div class="col-12 col-md-4 col-lg-4 " data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">ADVENTURE GAMES</h5>
+                <h5 class="myHeading"><i class="fa fa-hiking myGameIcon"></i>ADVENTURE GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -195,7 +182,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">BOARD GAMES</h5>
+                <h5 class="myHeading"><i class="fa fa-dice myGameIcon"></i>BOARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -240,7 +227,7 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">SPORTS GAMES</h5>
+                <h5 class="myHeading"><i class="fa fa-table-tennis myGameIcon"></i>SPORTS GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -279,7 +266,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">CARD GAMES</h5>
+                <h5 class="myHeading"><i class="fa fa-border-all myGameIcon"></i>CARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -313,7 +300,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">EDUCATIONAL GAMES</h5>
+                <h5 class="myHeading"><i class="fa fa-book-reader myGameIcon"></i>EDUCATIONAL GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -349,7 +336,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">FAMILY GAMES</h5>
+                <h5 class="myHeading"><i class="fa fa-heart myGameIcon"></i>FAMILY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -392,7 +379,7 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">STRATEGY GAMES</h5>
+                <h5 class="myHeading"><i class="fas fa-hourglass-start myGameIcon"></i>STRATEGY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -428,7 +415,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">MEMORY GAMES</h5>
+                <h5 class="myHeading"><i class="fa fa-brain myGameIcon"></i>MEMORY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -462,7 +449,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">WORD GAMES</h5>
+                <h5 class="myHeading"><i class="fa fa-book myGameIcon"></i>WORD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -498,7 +485,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">MULTIPLAYER GAMES</h5>
+                <h5 class="myHeading"><i class="fas fa-user-friends myGameIcon"></i>MULTIPLAYER GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -541,7 +528,7 @@
         <div class="col-12 col-md-4 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">PUZZLE GAMES</h5>
+                <h5 class="myHeading"><i class="fa fa-puzzle-piece myGameIcon"></i>PUZZLE GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -570,7 +557,7 @@
 
 
 
-  <!-- Recommended Games -->
+  
   <div class="container">
     
     
@@ -581,7 +568,7 @@
         <div class="col-12 col-md-4 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading">RECOMMENDED GAMES</h5>
+                <h5 class="myHeading"><i class="fa fa-thumbs-up myGameIcon"></i>RECOMMENDED GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
