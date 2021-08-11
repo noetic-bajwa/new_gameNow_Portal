@@ -336,22 +336,6 @@ export const SPORTSGAMES:any = [
         long_description: "Enjoy this new hypercasual cricket series game. Time your swings to ensure a perfect hit. Do it consistently, but beware of challenges ahead! Features: - Fast and hypercasual theme - User friendly controls on desktop and mobile - Real challenging gameplay. You think you have a hang of it, but the game just finds a way to beat you! - Can you be the world champion in cricket?"
         },
         {
-        plays: 15,
-        language: "en",
-        title: "Slam Dunk Forever",
-        date_added: "09-12-2016",
-        id: "6211361696645120",
-        icon_large: "http://whitelabel-cdn.marketjs.com/games/bubble-pop-adventures/localization/en/media/graphics/promo/icons/128x128.pngslam-dunk-forever",
-        icon_medium: "http://whitelabel-cdn.marketjs.com/games/slam-dunk-forever/localization/en/media/graphics/promo/icons/96x96.png",
-        url: "https://subscription.marketjs.com/serve?portal_id=5692266857365504&game_id=6211361696645120&branding_id=5169425925799936&ad_id=5185095820378112&portal_localization_id=6207741047603200&clear_cache=yes",
-        banner_large: "http://whitelabel-cdn.marketjs.com/games/slam-dunk-forever/localization/en/media/graphics/promo/banners/1300x500.jpg",
-        banner_medium: "http://whitelabel-cdn.marketjs.com/games/slam-dunk-forever/localization/en/media/graphics/promo/banners/440x280.jpgslam-dunk-forever",
-        short_description: "Practice your timing and accuracy",
-        icon_small: "http://whitelabel-cdn.marketjs.com/games/slam-dunk-forever/localization/en/media/graphics/promo/icons/64x64.png",
-        banner_small: "http://whitelabel-cdn.marketjs.com/games/slam-dunk-forever/localization/en/media/graphics/promo/banners/180x120.jpg",
-        long_description: "<p>The basketball is swinging gently from a rope. To score a slam dunk, time the ball's release to make it fall nicely into the hoop.</p> <p>How many slam dunks can you make? What's your winning streak?</p> <p>Features:</p> <ul> <li>A fun theme, perfect for outdoor sports</li> <li>Unlimited levels for unlimited gameplay</li> <li>Bonus points for factors such as speed, ricochets, and accuracy</li> <li>A variety of obstacles such as bouncers and spikes, to make things challenging</li> <li>Stuck? Earn coins to purchase magnets and springs to help</li> <li>Interactive tutorial to learn the ropes</li> </ul>"
-        },
-        {
         plays: 10,
         language: "en",
         title: "Tiny Golf World",
