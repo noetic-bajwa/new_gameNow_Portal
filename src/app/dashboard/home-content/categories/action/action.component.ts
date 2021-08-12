@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ACTIONGAMES } from '../../../../GAMES/actionGames';
+import { ALLGAMES } from '../../../../GAMES/allGames';
 
 
 import SwiperCore, {  Autoplay, EffectCoverflow,EffectCube,EffectFlip, Pagination } from "swiper/core";
@@ -14,6 +15,7 @@ declare let AOS: any;
 })
 export class ActionComponent implements OnInit {
   Games=ACTIONGAMES;
+  AllGames=ALLGAMES;
   constructor() { }
 
   ngOnInit(): void {
