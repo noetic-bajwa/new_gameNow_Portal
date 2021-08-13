@@ -8,13 +8,14 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-bookmark myGameIcon"></i>FEATURED GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Feature')" class="myHeading"><i class="fa fa-bookmark myGameIcon"></i>FEATURED GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
                 
             
             </div>
             <swiper
             [slidesPerView]="2"
-            [slidesPerColumn]=2
+            [slidesPerColumn]="2"
+            [loop]="false"
             [spaceBetween]=""
             [pagination]="{
                 dynamicBullets: false
@@ -65,28 +66,32 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-trophy myGameIcon"></i>LEADERBOARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('LeaderBoard')" class="myHeading"><i class="fa fa-trophy myGameIcon"></i>LEADERBOARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
-            [slidesPerView]="1"
-            [slidesPerColumn]="1"
-            [spaceBetween]="30"
+            [slidesPerView]="2"
+            [slidesPerColumn]="2"
+            [loop]="false"
+            [spaceBetween]=""
             [pagination]="{
                 dynamicBullets: false
               }"
               [breakpoints]="{
                 '640': {
                   slidesPerView: 3,
-                  spaceBetween: 30
+                  spaceBetween: 30,
+                  slidesPerColumn:1
                 },
                 '768': {
                   slidesPerView: 3,
-                  spaceBetween: 30
+                  spaceBetween: 30,
+                  slidesPerColumn:1
                 },
                 '1024': {
                   slidesPerView: 3,
-                  spaceBetween: 30
+                  spaceBetween: 30,
+                  slidesPerColumn:1
                 }
               }"
             class=""
@@ -97,8 +102,8 @@
                   <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
-                  </div>
-                </div>  
+                  </div> 
+                  </div> 
             </ng-template>
             </ng-container>
             </swiper>
@@ -116,32 +121,35 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-star myGameIcon"></i>POPULAR GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Popular')" class="myHeading"><i class="fa fa-star myGameIcon"></i>POPULAR GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
-            [slidesPerView]="1"
-            [slidesPerColumn]="1"
-            [spaceBetween]="30"
-            [loop]="true"
+            [slidesPerView]="2"
+            [slidesPerColumn]="2"
+            [loop]="false"
+            [spaceBetween]=""
             [pagination]="{
-                dynamicBullets: true
+                dynamicBullets: false
               }"
               [breakpoints]="{
                 '640': {
                   slidesPerView: 3,
-                  spaceBetween: 30
+                  spaceBetween: 30,
+                  slidesPerColumn:1
                 },
                 '768': {
                   slidesPerView: 3,
-                  spaceBetween: 30
+                  spaceBetween: 30,
+                  slidesPerColumn:1
                 },
                 '1024': {
                   slidesPerView: 3,
-                  spaceBetween: 30
+                  spaceBetween: 30,
+                  slidesPerColumn:1
                 }
               }"
-            class="mySwiper"
+            class=""
             >
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Popular')">
@@ -149,8 +157,8 @@
                   <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
-                  </div>  
-                </div>
+                  </div> 
+                  </div> 
             </ng-template>
             </ng-container>
             </swiper>
@@ -168,7 +176,7 @@
         <div class="col-12 col-md-4 col-lg-4 " data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-crosshairs myGameIcon"></i>ACTION GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Action')" class="myHeading"><i class="fa fa-crosshairs myGameIcon"></i>ACTION GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -209,7 +217,7 @@
         <div class="col-12 col-md-4 col-lg-4 " data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-hiking myGameIcon"></i>ADVENTURE GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Adventure')" class="myHeading"><i class="fa fa-hiking myGameIcon"></i>ADVENTURE GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -251,7 +259,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-dice myGameIcon"></i>BOARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Memory')" class="myHeading"><i class="fa fa-dice myGameIcon"></i>BOARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -300,13 +308,14 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-table-tennis myGameIcon"></i>SPORTS GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Sports')" class="myHeading"><i class="fa fa-table-tennis myGameIcon"></i>SPORTS GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
             [slidesPerView]="1"
             [slidesPerColumn]="1"
             [spaceBetween]="30"
+            [loop]="true"
             [pagination]="{
                 dynamicBullets: true
               }"
@@ -357,7 +366,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-border-all myGameIcon"></i>CARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Card')" class="myHeading"><i class="fa fa-border-all myGameIcon"></i>CARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -375,8 +384,7 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true,
-                    type:'fraction'
+                    dynamicBullets: true
                   }"
                 class=""
             >
@@ -397,7 +405,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-book-reader myGameIcon"></i>EDUCATIONAL GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Educational')" class="myHeading"><i class="fa fa-book-reader myGameIcon"></i>EDUCATIONAL GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -416,8 +424,7 @@
               disableOnInteraction: true
             }"
             [pagination]="{
-                dynamicBullets: true,
-                type:'fraction'
+                dynamicBullets: true
               }"
             class=""
           
@@ -440,7 +447,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-heart myGameIcon"></i>FAMILY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Family')" class="myHeading"><i class="fa fa-heart myGameIcon"></i>FAMILY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -458,8 +465,7 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true,
-                    type:'fraction'
+                    dynamicBullets: true
                   }"
                 class=""
             >
@@ -490,16 +496,16 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-hourglass-start myGameIcon"></i>STRATEGY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Strategy')" class="myHeading"><i class="fa fa-hourglass-start myGameIcon"></i>STRATEGY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
             [slidesPerView]="1"
             [slidesPerColumn]="1"
+            [loop]="true"
             [spaceBetween]="20"
             [pagination]="{
-                dynamicBullets: true,
-                type:'fraction'
+                dynamicBullets: true
               }"
               [breakpoints]="{
                 '640': {
@@ -545,7 +551,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-brain myGameIcon"></i>MEMORY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Memory')" class="myHeading"><i class="fa fa-brain myGameIcon"></i>MEMORY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -563,8 +569,7 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true,
-                    type:'fraction'
+                    dynamicBullets: true
                   }"
                 class=""
             >
@@ -585,7 +590,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-book myGameIcon"></i>WORD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Word')" class="myHeading"><i class="fa fa-book myGameIcon"></i>WORD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -604,8 +609,7 @@
               disableOnInteraction: true
             }"
             [pagination]="{
-                dynamicBullets: true,
-                type:'fraction'
+                dynamicBullets: true
               }"
             class=""
           
@@ -627,7 +631,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-user-friends myGameIcon"></i>MULTIPLAYER GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Multiplayer')" class="myHeading"><i class="fa fa-user-friends myGameIcon"></i>MULTIPLAYER GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -645,8 +649,7 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true,
-                    type:'fraction'
+                    dynamicBullets: true
                   }"
                 class=""
             >
@@ -676,16 +679,16 @@
         <div class="col-12 col-md-4 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-puzzle-piece myGameIcon"></i>PUZZLE GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Puzzle')" class="myHeading"><i class="fa fa-puzzle-piece myGameIcon"></i>PUZZLE GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
             [slidesPerView]="1"
             [slidesPerColumn]="1"
+            [loop]="true"
             [spaceBetween]="20"
             [pagination]="{
-                dynamicBullets: true,
-                type:'fraction'
+                dynamicBullets: true
               }"
               [breakpoints]="{
                 '640': {
@@ -735,12 +738,13 @@
         <div class="col-12 col-md-4 col-lg-12" data-aos="flip-left">
             <div class="text-center">
         
-                <h5 class="myHeading"><i class="fa fa-thumbs-up myGameIcon"></i>RECOMMENDED GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 (click)="onClickCategory('Recommended')" class="myHeading"><i class="fa fa-thumbs-up myGameIcon"></i>RECOMMENDED GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
             [slidesPerView]="1"
             [slidesPerColumn]="1"
+            [loop]="true"
             [spaceBetween]="20"
             [pagination]="{
                 dynamicBullets: true

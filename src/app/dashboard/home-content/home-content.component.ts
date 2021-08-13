@@ -79,6 +79,12 @@ export class HomeContentComponent implements OnInit {
      onClick(id:any){
        alert(id)
      }
+
+     onClickCategory(id:any){
+      alert(id)
+    }
+
+
   }
 
 
