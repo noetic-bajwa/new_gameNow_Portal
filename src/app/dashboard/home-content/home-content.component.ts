@@ -18,6 +18,7 @@ import { MULTIPLAYERGAMES } from '../../GAMES/multiplayerGames';
 import { PUZZLEGAMES } from '../../GAMES/puzzleGames';
 import { POPULARGAMES } from '../../GAMES/popularGames';
 import { RECOMMENDEDGAMES } from '../../GAMES/recommendedGames';
+import { ALLGAMES } from 'src/app/GAMES/allGames';
 
 import SwiperCore, {Lazy,  Autoplay, EffectCoverflow,EffectCube,EffectFlip, Pagination } from "swiper/core";
 
@@ -49,11 +50,15 @@ export class HomeContentComponent implements OnInit {
   PuzzleGames = PUZZLEGAMES;
   PopularGames = PUZZLEGAMES;
   RecommendedGames = RECOMMENDEDGAMES;
+  AllGames = ALLGAMES;
   
-  constructor( private gamesData:DataService,private authService:AuthenticationGuard) { }
+  constructor( private gamesData:DataService,private authService:AuthenticationGuard) { 
+    console.log(this.AllGames[0].genres)
+  }
 
   permission = this.authService.canActivate();
   ngOnInit(): void {
+    // console.log(this.AllGames)
     AOS.init();
     console.log(this.permission);
     // this.gamesData.getData().subscribe(
@@ -66,7 +71,14 @@ export class HomeContentComponent implements OnInit {
        
     //   });
       
+    
+
+    
      };
+
+     onClick(id:any){
+       alert(id)
+     }
   }
 
 

@@ -13,37 +13,43 @@
             
             </div>
             <swiper
-            [slidesPerView]="1"
-            [slidesPerColumn]="1"
-            [spaceBetween]="30"
+            [slidesPerView]="2"
+            [slidesPerColumn]=2
+            [spaceBetween]=""
             [pagination]="{
                 dynamicBullets: false
               }"
               [breakpoints]="{
                 '640': {
                   slidesPerView: 3,
-                  spaceBetween: 30
+                  spaceBetween: 30,
+                  slidesPerColumn:1
                 },
                 '768': {
                   slidesPerView: 3,
-                  spaceBetween: 30
+                  spaceBetween: 30,
+                  slidesPerColumn:1
                 },
                 '1024': {
                   slidesPerView: 3,
-                  spaceBetween: 30
+                  spaceBetween: 30,
+                  slidesPerColumn:1
                 }
               }"
             class=""
             >
-            <ng-template swiperSlide *ngFor="let game of FeaturedGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
+            <ng-container *ngFor="let game of AllGames;">
+              <ng-template swiperSlide *ngIf="game.genres.includes('Feature')">
+                <div (click)="onClick(game.id)">
+                  <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                  <div class="text-center"> 
+                      <p class="gameTitle">{{game.title}}</p>
+                  </div> 
+                  </div> 
             </ng-template>
+            </ng-container>
             </swiper>
         </div>
-
     </div>
 </div>
 
@@ -85,12 +91,16 @@
               }"
             class=""
             >
-            <ng-template swiperSlide *ngFor="let game of LeaderBoardGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
+            <ng-container *ngFor="let game of AllGames;">
+              <ng-template swiperSlide *ngIf="game.genres.includes('LeaderBoard')">
+                <div (click)="onClick(game.id)">
+                  <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                  <div class="text-center"> 
+                      <p class="gameTitle">{{game.title}}</p>
+                  </div>
+                </div>  
             </ng-template>
+            </ng-container>
             </swiper>
         </div>
 
@@ -133,18 +143,23 @@
               }"
             class="mySwiper"
             >
-            <ng-template swiperSlide *ngFor="let game of StrategyGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
+            <ng-container *ngFor="let game of AllGames;">
+              <ng-template swiperSlide *ngIf="game.genres.includes('Popular')">
+                <div (click)="onClick(game.id)">
+                  <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                  <div class="text-center"> 
+                      <p class="gameTitle">{{game.title}}</p>
+                  </div>  
+                </div>
             </ng-template>
+            </ng-container>
             </swiper>
         </div>
 
     </div>
 </div>
 
+<!-- Action Game -->
 
 <div class="container" style="overflow-y: hidden;overflow-x: hidden;">
 
@@ -176,14 +191,20 @@
                   }"
                 class=""
             >
-            <ng-template swiperSlide *ngFor="let game of ActionGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
+            <ng-container *ngFor="let game of AllGames;">
+              <ng-template swiperSlide *ngIf="game.genres.includes('Action')">
+                <div (click)="onClick(game.id)">
+                  <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                  <div class="text-center"> 
+                      <p class="gameTitle">{{game.title}}</p>
+                  </div> 
+                </div> 
             </ng-template>
+            </ng-container>
             </swiper>
         </div>
+
+        <!-- Adventure Games -->
 
         <div class="col-12 col-md-4 col-lg-4 " data-aos="flip-left">
             <div class="text-center">
@@ -212,14 +233,20 @@
             class=""
           
           >
-            <ng-template swiperSlide *ngFor="let game of AdventureGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
-            </ng-template>
+          <ng-container *ngFor="let game of AllGames;">
+            <ng-template swiperSlide *ngIf="game.genres.includes('Adventure')">
+              <div (click)="onClick(game.id)">
+                <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                <div class="text-center"> 
+                    <p class="gameTitle">{{game.title}}</p>
+                </div>  
+              </div>
+          </ng-template>
+          </ng-container>
             </swiper>
         </div>
+
+        <!-- Board Games -->
 
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
@@ -246,19 +273,23 @@
                   }"
                 class=""
             >
-            <ng-template swiperSlide *ngFor="let game of BoardGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
+            <ng-container *ngFor="let game of AllGames;">
+              <ng-template swiperSlide *ngIf="game.genres.includes('Board')">
+                <div (click)="onClick(game.id)">
+                  <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                  <div class="text-center"> 
+                      <p class="gameTitle">{{game.title}}</p>
+                  </div>  
+                </div>
             </ng-template>
+            </ng-container>
             </swiper>
         </div>
     </div>
 </div>
 
 
-
+<!-- Sports Games -->
   <div class="container">
     
     
@@ -295,12 +326,16 @@
               }"
             class="mySwiper"
             >
-            <ng-template swiperSlide *ngFor="let game of SportsGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
+            <ng-container *ngFor="let game of AllGames;">
+              <ng-template swiperSlide *ngIf="game.genres.includes('Sports')">
+                <div (click)="onClick(game.id)">
+                  <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                  <div class="text-center"> 
+                      <p class="gameTitle">{{game.title}}</p>
+                  </div> 
+                  </div> 
             </ng-template>
+            </ng-container>
             </swiper>
         </div>
 
@@ -318,7 +353,7 @@
     
     <div class="row" style="justify-content: center;">
 
-        
+        <!-- Card Games -->
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
@@ -340,19 +375,25 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true
+                    dynamicBullets: true,
+                    type:'fraction'
                   }"
                 class=""
             >
-            <ng-template swiperSlide *ngFor="let game of ActionGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
+            <ng-container *ngFor="let game of AllGames;">
+              <ng-template swiperSlide *ngIf="game.genres.includes('Card')">
+                <div (click)="onClick(game.id)">
+                  <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                  <div class="text-center"> 
+                      <p class="gameTitle">{{game.title}}</p>
+                  </div> 
+                </div> 
             </ng-template>
+            </ng-container>
             </swiper>
         </div>
 
+        <!-- Educational -->
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
@@ -375,19 +416,26 @@
               disableOnInteraction: true
             }"
             [pagination]="{
-                dynamicBullets: true
+                dynamicBullets: true,
+                type:'fraction'
               }"
             class=""
           
           >
-            <ng-template swiperSlide *ngFor="let game of AdventureGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
-            </ng-template>
+          <ng-container *ngFor="let game of AllGames;">
+            <ng-template swiperSlide *ngIf="game.genres.includes('Educational')">
+              <div (click)="onClick(game.id)">
+                <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                <div class="text-center"> 
+                    <p class="gameTitle">{{game.title}}</p>
+                </div> 
+              </div> 
+          </ng-template>
+          </ng-container>
             </swiper>
         </div>
+
+        <!-- Family Games -->
 
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
@@ -410,21 +458,28 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true
+                    dynamicBullets: true,
+                    type:'fraction'
                   }"
                 class=""
             >
-            <ng-template swiperSlide *ngFor="let game of BoardGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
+            <ng-container *ngFor="let game of AllGames;">
+              <ng-template swiperSlide *ngIf="game.genres.includes('Family')">
+                <div (click)="onClick(game.id)">
+                  <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                  <div class="text-center"> 
+                      <p class="gameTitle">{{game.title}}</p>
+                  </div> 
+                </div> 
             </ng-template>
+            </ng-container>
             </swiper>
         </div>
     </div>
-  </div>
+  </div> 
 
+
+  <!-- Strategy -->
   <div class="container">
     
     
@@ -443,7 +498,8 @@
             [slidesPerColumn]="1"
             [spaceBetween]="20"
             [pagination]="{
-                dynamicBullets: true
+                dynamicBullets: true,
+                type:'fraction'
               }"
               [breakpoints]="{
                 '640': {
@@ -461,25 +517,29 @@
               }"
             class="mySwiper"
             >
-            <ng-template swiperSlide *ngFor="let game of StrategyGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
+            <ng-container *ngFor="let game of AllGames;">
+              <ng-template swiperSlide *ngIf="game.genres.includes('Strategy')">
+                <div (click)="onClick(game.id)">
+                  <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                  <div class="text-center"> 
+                      <p class="gameTitle">{{game.title}}</p>
+                  </div>  
+                </div>
             </ng-template>
+            </ng-container>
             </swiper>
         </div>
 
         
         
     </div>
-  </div>
+  </div> 
 
 
-  <div class="container">
+   <div class="container">
     
     
-    
+    <!-- Memory Games -->
     <div class="row" style="justify-content: center;">
 
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
@@ -503,19 +563,25 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true
+                    dynamicBullets: true,
+                    type:'fraction'
                   }"
                 class=""
             >
-            <ng-template swiperSlide *ngFor="let game of MemoryGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
+            <ng-container *ngFor="let game of AllGames;">
+              <ng-template swiperSlide *ngIf="game.genres.includes('Memory')">
+                <div (click)="onClick(game.id)">
+                  <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                  <div class="text-center"> 
+                      <p class="gameTitle">{{game.title}}</p>
+                  </div>  
+                </div>
             </ng-template>
+            </ng-container>
             </swiper>
         </div>
 
+        <!-- Word Games -->
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
@@ -538,20 +604,26 @@
               disableOnInteraction: true
             }"
             [pagination]="{
-                dynamicBullets: true
+                dynamicBullets: true,
+                type:'fraction'
               }"
             class=""
           
           >
-            <ng-template swiperSlide *ngFor="let game of WordGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
-            </ng-template>
+          <ng-container *ngFor="let game of AllGames;">
+            <ng-template swiperSlide *ngIf="game.genres.includes('Word')">
+              <div (click)="onClick(game.id)">
+                <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                <div class="text-center"> 
+                    <p class="gameTitle">{{game.title}}</p>
+                </div>  
+                </div>
+          </ng-template>
+          </ng-container>
             </swiper>
         </div>
 
+        <!-- Multiplayer Games -->
         <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
             <div class="text-center">
         
@@ -573,25 +645,31 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true
+                    dynamicBullets: true,
+                    type:'fraction'
                   }"
                 class=""
             >
-            <ng-template swiperSlide *ngFor="let game of MultiplayerGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
+            <ng-container *ngFor="let game of AllGames;">
+              <ng-template swiperSlide *ngIf="game.genres.includes('Multiplayer')">
+                <div (click)="onClick(game.id)">
+                  <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                  <div class="text-center"> 
+                      <p class="gameTitle">{{game.title}}</p>
+                  </div>  
+                </div>
             </ng-template>
+            </ng-container>
             </swiper>
         </div>
     </div>
-  </div>
+  </div> 
 
-  <div class="container">
-    
-    
-    
+
+  
+  <!-- Puzzle Games -->
+  
+  <div class="container"> 
     <div class="row" style="justify-content: center;" >
 
         
@@ -606,7 +684,8 @@
             [slidesPerColumn]="1"
             [spaceBetween]="20"
             [pagination]="{
-                dynamicBullets: true
+                dynamicBullets: true,
+                type:'fraction'
               }"
               [breakpoints]="{
                 '640': {
@@ -624,12 +703,16 @@
               }"
             class="mySwiper"
             >
-            <ng-template swiperSlide *ngFor="let game of PuzzleGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
-                    <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
+            <ng-container *ngFor="let game of AllGames;">
+              <ng-template (click)="onClick(game.id)" swiperSlide *ngIf="game.genres.includes('Puzzle')">
+                <div (click)="onClick(game.id)">
+                  <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                  <div class="text-center"> 
+                      <p class="gameTitle">{{game.title}}</p>
+                  </div> 
+                </div> 
             </ng-template>
+            </ng-container>
             </swiper>
         </div>
 
@@ -641,7 +724,7 @@
 
 
 
-  
+  <!-- Recommended Games -->
   <div class="container">
     
     
@@ -678,16 +761,23 @@
               }"
             class=""
             >
-            <ng-template swiperSlide *ngFor="let game of RecommendedGames;">
-                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+            <ng-container *ngFor="let game of AllGames;">
+              <ng-template  swiperSlide *ngIf="game.genres.includes('Recommended')">
+                  <div (click)="onClick(game.id)">
+                    <img  class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                     <div class="text-center"> 
-                        <p class="gameTitle">{{game.title}}</p>
-                    </div>      
+                    <p class="gameTitle">{{game.title}}</p>
+                  </div> 
+                  </div> 
             </ng-template>
+            </ng-container>
             </swiper>
         </div>
 
         
         
     </div>
-  </div>
+  </div> 
+
+
+ 

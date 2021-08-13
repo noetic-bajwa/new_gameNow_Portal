@@ -83,5 +83,7 @@ body {
 }
 
 
-
+.swiper-container-multirow-column > .swiper-wrapper {
+  flex-direction: inherit;
+}
 
