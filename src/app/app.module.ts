@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SwiperModule } from 'swiper/angular';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
+import { CategoryComponent } from './dashboard/home-content/category/category.component';
+import { GamePlayComponent } from './dashboard/home-content/game-play/game-play.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { NgxScrollTopModule } from 'ngx-scrolltop';
     FooterComponent,
     HomeContentComponent,
     CarouselComponent,
+    CategoryComponent,
+    GamePlayComponent,
   ],
   imports: [
     BrowserModule,
