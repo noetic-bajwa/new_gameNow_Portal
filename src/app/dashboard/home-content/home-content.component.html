@@ -18,7 +18,8 @@
             [loop]="false"
             [spaceBetween]=""
             [pagination]="{
-                dynamicBullets: false
+                dynamicBullets: false,
+                clickable: true
               }"
               [breakpoints]="{
                 '640': {
@@ -75,7 +76,8 @@
             [loop]="false"
             [spaceBetween]=""
             [pagination]="{
-                dynamicBullets: false
+                dynamicBullets: false,
+                clickable: true
               }"
               [breakpoints]="{
                 '640': {
@@ -130,7 +132,8 @@
             [loop]="false"
             [spaceBetween]=""
             [pagination]="{
-                dynamicBullets: false
+                dynamicBullets: false,
+                clickable: true
               }"
               [breakpoints]="{
                 '640': {
@@ -169,33 +172,15 @@
 
 
 
-<div class="container" style="z-index: 9999999999999999999999;">
+<!-- <div class="container">
   <div class="row" style="justify-content: center;">
-    <div class="col-12 col-md-4 col-lg-4 text-center">
-      <div>
-        <div class="dropdown dropdown--rotate" style="z-index: 9999999999999999999999;">
-          <button class="button">
-            Select Country
-            <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 20 20">
-              <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-            </svg>
-          </button>
-          <div class="menu">
-            <ul>
-              <li><img src="https://www.countryflags.com/wp-content/uploads/france-flag-png-large.png">France</li>
-              <li><img src="https://www.countryflags.com/wp-content/uploads/germany-flag-png-large.png">Germany</li>
-              <li><img src="https://www.countryflags.com/wp-content/uploads/italy-flag-png-large.png">Italy</li>
-              <li><img src="https://www.countryflags.com/wp-content/uploads/switzerland-flag-png-large.png">Switzerland</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="col-12 col-md-4  text-center" >
+        
     </div>
 
   </div>
 
-
+</div> -->
 
 <!-- Categories Start From here -->
 <!-- Action Game -->
@@ -252,26 +237,24 @@
             
             </div>
             <swiper
-            [loop]="true"
-            [effect]="'flip'"
-            [grabCursor]="true"
-            [pagination]="true"
-            [navigation]="true"
-            [flipEffect]="{
-              
-              slideShadows: false
-            }"
-
-            [autoplay]="{
-              delay: 300000,
-              disableOnInteraction: true
-            }"
-            [pagination]="{
-                dynamicBullets: true
-              }"
-            class=""
-          
-          >
+                [effect]="'cube'"
+                [grabCursor]="true"
+                [loop]="true"
+                [autoplay]="{
+                delay: 300000,
+                disableOnInteraction: true
+                }"
+                [cubeEffect]="{
+                shadow: false,
+                slideShadows: false,
+                shadowOffset: 20,
+                shadowScale: 0.94
+                }"
+                [pagination]="{
+                    dynamicBullets: true
+                  }"
+                class=""
+            >
           <ng-container *ngFor="let game of AllGames;">
             <ng-template swiperSlide *ngIf="game.genres.includes('Adventure')">
               <div (click)="onClick(game.id)">

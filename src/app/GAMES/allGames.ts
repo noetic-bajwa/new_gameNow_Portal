@@ -21,7 +21,7 @@ export const ALLGAMES = [
         screenshot3_small: "https://subscription-cdn.marketjs.com/games/bubble-invasion/localization/en/media/graphics/promo/screenshots/3.jpg"
         },
         {
-        genres: "Action,Adventure",
+        genres: "Adventure",
         screenshot2_small: "https://subscription-cdn.marketjs.com/games/stupid-zombies-1/localization/en/media/graphics/promo/screenshots/2.jpg",
         plays: 95,
         language: "en",
@@ -5229,7 +5229,7 @@ export const ALLGAMES = [
         screenshot3_small: "https://cdn.marketjs.net/games/monkey-multiple/localization/en/media/graphics/promo/screenshots/3.jpg"
         },
         {
-        genres: "Family",
+        genres: "",
         screenshot2_small: "https://cdn.marketjs.net/games/chef-slash/localization/en/media/graphics/promo/screenshots/2.jpg",
         plays: 8,
         language: "en",
@@ -9408,7 +9408,7 @@ export const ALLGAMES = [
         screenshot3_small: "https://whitelabel-cdn.marketjs.com/games/street-racing-mania/localization/en/media/graphics/promo/screenshots/3.jpg"
         },
         {
-        genres: "Action",
+        genres: "",
         screenshot2_small: "https://whitelabel-cdn.marketjs.com/games/defend-the-castle/localization/en/media/graphics/promo/screenshots/2.jpg",
         plays: 24,
         language: "en",
