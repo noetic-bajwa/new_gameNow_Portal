@@ -5,10 +5,10 @@
     
     <div class="row" style="justify-content: center;" >
 
-        <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
+        <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Feature')" class="myHeading"><i class="fa fa-bookmark myGameIcon"></i>FEATURED GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Feature']"  class="myHeading"><i class="fa fa-bookmark myGameIcon"></i>FEATURED GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
                 
             
             </div>
@@ -42,7 +42,7 @@
             >
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Feature')">
-                <div (click)="onClick(game.id)">
+                <div [routerLink]="['/Feature',game.id]">
                   <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
@@ -64,10 +64,10 @@
     
     <div class="row" style="justify-content: center;" >
 
-        <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
+        <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('LeaderBoard')" class="myHeading"><i class="fa fa-trophy myGameIcon"></i>LEADERBOARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/LeaderBoard']"  class="myHeading"><i class="fa fa-trophy myGameIcon"></i>LEADERBOARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -100,7 +100,7 @@
             >
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('LeaderBoard')">
-                <div (click)="onClick(game.id)">
+                <div [routerLink]="['/LeaderBoard',game.id]">
                   <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
@@ -120,10 +120,10 @@
     
     <div class="row" style="justify-content: center;" >
 
-        <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
+        <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Popular')" class="myHeading"><i class="fa fa-star myGameIcon"></i>POPULAR GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Popular']"  class="myHeading"><i class="fa fa-star myGameIcon"></i>POPULAR GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -156,7 +156,7 @@
             >
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Popular')">
-                <div (click)="onClick(game.id)">
+                <div [routerLink]="['/Popular',game.id]">
                   <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
@@ -189,10 +189,10 @@
 
     <div class="row" style="justify-content: center;">
   
-        <div class="col-12 col-md-4 col-lg-4 " data-aos="flip-left">
+        <div class="col-12 col-md-4 col-lg-4 " data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Action')" class="myHeading"><i class="fa fa-crosshairs myGameIcon"></i>ACTION GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Action']"  class="myHeading"><i class="fa fa-crosshairs myGameIcon"></i>ACTION GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -211,13 +211,14 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true
+                    dynamicBullets: true,
+                    clickable: true
                   }"
                 class=""
             >
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Action')">
-                <div (click)="onClick(game.id)">
+                <div [routerLink]="['/Action',game.id]">
                   <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
@@ -230,10 +231,10 @@
 
         <!-- Adventure Games -->
 
-        <div class="col-12 col-md-4 col-lg-4 " data-aos="flip-left">
+        <div class="col-12 col-md-4 col-lg-4 " data-aos="">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Adventure')" class="myHeading"><i class="fa fa-hiking myGameIcon"></i>ADVENTURE GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Adventure']" class="myHeading"><i class="fa fa-hiking myGameIcon"></i>ADVENTURE GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -251,13 +252,14 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true
+                    dynamicBullets: true,
+                    clickable: true
                   }"
                 class=""
             >
           <ng-container *ngFor="let game of AllGames;">
             <ng-template swiperSlide *ngIf="game.genres.includes('Adventure')">
-              <div (click)="onClick(game.id)">
+              <div [routerLink]="['/Adventure',game.id]">
                 <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                 <div class="text-center"> 
                     <p class="gameTitle">{{game.title}}</p>
@@ -270,10 +272,10 @@
 
         <!-- Board Games -->
 
-        <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
+        <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Memory')" class="myHeading"><i class="fa fa-dice myGameIcon"></i>BOARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Board']" class="myHeading"><i class="fa fa-dice myGameIcon"></i>BOARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -291,13 +293,14 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true
+                    dynamicBullets: true,
+                    clickable: true
                   }"
                 class=""
             >
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Board')">
-                <div (click)="onClick(game.id)">
+                <div [routerLink]="['/Board',game.id]">
                   <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
@@ -319,10 +322,10 @@
     <div class="row" style="justify-content: center;">
 
         
-        <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
+        <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Sports')" class="myHeading"><i class="fa fa-table-tennis myGameIcon"></i>SPORTS GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Sports']"  class="myHeading"><i class="fa fa-table-tennis myGameIcon"></i>SPORTS GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -331,7 +334,8 @@
             [spaceBetween]="30"
             [loop]="true"
             [pagination]="{
-                dynamicBullets: true
+                dynamicBullets: true,
+                clickable: true
               }"
               [breakpoints]="{
                 '640': {
@@ -351,7 +355,7 @@
             >
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Sports')">
-                <div (click)="onClick(game.id)">
+                <div [routerLink]="['/Sports',game.id]">
                   <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
@@ -377,10 +381,10 @@
     <div class="row" style="justify-content: center;">
 
         <!-- Card Games -->
-        <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
+        <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Card')" class="myHeading"><i class="fa fa-border-all myGameIcon"></i>CARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Card']"  class="myHeading"><i class="fa fa-border-all myGameIcon"></i>CARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -398,13 +402,14 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true
+                    dynamicBullets: true,
+                    clickable: true
                   }"
                 class=""
             >
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Card')">
-                <div (click)="onClick(game.id)">
+                <div [routerLink]="['/Card',game.id]">
                   <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
@@ -416,10 +421,10 @@
         </div>
 
         <!-- Educational -->
-        <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
+        <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Educational')" class="myHeading"><i class="fa fa-book-reader myGameIcon"></i>EDUCATIONAL GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Educational']"  class="myHeading"><i class="fa fa-book-reader myGameIcon"></i>EDUCATIONAL GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -429,7 +434,6 @@
             [pagination]="true"
             [navigation]="true"
             [flipEffect]="{
-              
               slideShadows: false
             }"
 
@@ -438,14 +442,15 @@
               disableOnInteraction: true
             }"
             [pagination]="{
-                dynamicBullets: true
+                dynamicBullets: true,
+                clickable: true
               }"
             class=""
           
           >
           <ng-container *ngFor="let game of AllGames;">
             <ng-template swiperSlide *ngIf="game.genres.includes('Educational')">
-              <div (click)="onClick(game.id)">
+              <div [routerLink]="['/Educational',game.id]">
                 <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                 <div class="text-center"> 
                     <p class="gameTitle">{{game.title}}</p>
@@ -458,10 +463,10 @@
 
         <!-- Family Games -->
 
-        <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
+        <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Family')" class="myHeading"><i class="fa fa-heart myGameIcon"></i>FAMILY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Family']"  class="myHeading"><i class="fa fa-heart myGameIcon"></i>FAMILY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -479,13 +484,14 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true
+                    dynamicBullets: true,
+                    clickable: true
                   }"
                 class=""
             >
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Family')">
-                <div (click)="onClick(game.id)">
+                <div [routerLink]="['/Family',game.id]">
                   <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
@@ -507,10 +513,10 @@
     <div class="row" style="justify-content: center;" >
 
         
-        <div class="col-12 col-md-12 col-lg-12" data-aos="flip-left">
+        <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Strategy')" class="myHeading"><i class="fa fa-hourglass-start myGameIcon"></i>STRATEGY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Strategy']"  class="myHeading"><i class="fa fa-hourglass-start myGameIcon"></i>STRATEGY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -519,7 +525,8 @@
             [loop]="true"
             [spaceBetween]="20"
             [pagination]="{
-                dynamicBullets: true
+                dynamicBullets: true,
+                clickable: true
               }"
               [breakpoints]="{
                 '640': {
@@ -539,7 +546,7 @@
             >
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Strategy')">
-                <div (click)="onClick(game.id)">
+                <div [routerLink]="['/Strategy',game.id]">
                   <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
@@ -562,10 +569,10 @@
     <!-- Memory Games -->
     <div class="row" style="justify-content: center;">
 
-        <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
+        <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Memory')" class="myHeading"><i class="fa fa-brain myGameIcon"></i>MEMORY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Memory']"  class="myHeading"><i class="fa fa-brain myGameIcon"></i>MEMORY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -583,13 +590,14 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true
+                    dynamicBullets: true,
+                    clickable: true
                   }"
                 class=""
             >
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Memory')">
-                <div (click)="onClick(game.id)">
+                <div [routerLink]="['/Memory',game.id]">
                   <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
@@ -601,10 +609,10 @@
         </div>
 
         <!-- Word Games -->
-        <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
+        <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Word')" class="myHeading"><i class="fa fa-book myGameIcon"></i>WORD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Word']"  class="myHeading"><i class="fa fa-book myGameIcon"></i>WORD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -623,14 +631,15 @@
               disableOnInteraction: true
             }"
             [pagination]="{
-                dynamicBullets: true
+                dynamicBullets: true,
+                clickable: true
               }"
             class=""
           
           >
           <ng-container *ngFor="let game of AllGames;">
             <ng-template swiperSlide *ngIf="game.genres.includes('Word')">
-              <div (click)="onClick(game.id)">
+              <div [routerLink]="['/Word',game.id]">
                 <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                 <div class="text-center"> 
                     <p class="gameTitle">{{game.title}}</p>
@@ -642,10 +651,10 @@
         </div>
 
         <!-- Multiplayer Games -->
-        <div class="col-12 col-md-4 col-lg-4" data-aos="flip-left">
+        <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Multiplayer')" class="myHeading"><i class="fa fa-user-friends myGameIcon"></i>MULTIPLAYER GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Multiplayer']"  class="myHeading"><i class="fa fa-user-friends myGameIcon"></i>MULTIPLAYER GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -663,13 +672,14 @@
                 shadowScale: 0.94
                 }"
                 [pagination]="{
-                    dynamicBullets: true
+                    dynamicBullets: true,
+                    clickable: true
                   }"
                 class=""
             >
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Multiplayer')">
-                <div (click)="onClick(game.id)">
+                <div [routerLink]="['/Multiplayer',game.id]">
                   <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
@@ -690,10 +700,10 @@
     <div class="row" style="justify-content: center;" >
 
         
-        <div class="col-12 col-md-4 col-lg-12" data-aos="flip-left">
+        <div class="col-12 col-md-4 col-lg-12" data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Puzzle')" class="myHeading"><i class="fa fa-puzzle-piece myGameIcon"></i>PUZZLE GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Puzzle']"  class="myHeading"><i class="fa fa-puzzle-piece myGameIcon"></i>PUZZLE GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -702,7 +712,8 @@
             [loop]="true"
             [spaceBetween]="20"
             [pagination]="{
-                dynamicBullets: true
+                dynamicBullets: true,
+                clickable: true
               }"
               [breakpoints]="{
                 '640': {
@@ -721,8 +732,8 @@
             class="mySwiper"
             >
             <ng-container *ngFor="let game of AllGames;">
-              <ng-template (click)="onClick(game.id)" swiperSlide *ngIf="game.genres.includes('Puzzle')">
-                <div (click)="onClick(game.id)">
+              <ng-template  swiperSlide *ngIf="game.genres.includes('Puzzle')">
+                <div [routerLink]="['/Puzzle',game.id]">
                   <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
@@ -749,10 +760,10 @@
     <div class="row" style="justify-content: center;" >
 
         
-        <div class="col-12 col-md-4 col-lg-12" data-aos="flip-left">
+        <div class="col-12 col-md-4 col-lg-12" data-aos=" ">
             <div class="text-center">
         
-                <h5 (click)="onClickCategory('Recommended')" class="myHeading"><i class="fa fa-thumbs-up myGameIcon"></i>RECOMMENDED GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Recommended']"  class="myHeading"><i class="fa fa-thumbs-up myGameIcon"></i>RECOMMENDED GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
             
             </div>
             <swiper
@@ -761,7 +772,8 @@
             [loop]="true"
             [spaceBetween]="20"
             [pagination]="{
-                dynamicBullets: true
+                dynamicBullets: true,
+                clickable: true
               }"
               [breakpoints]="{
                 '640': {
@@ -781,7 +793,7 @@
             >
             <ng-container *ngFor="let game of AllGames;">
               <ng-template  swiperSlide *ngIf="game.genres.includes('Recommended')">
-                  <div (click)="onClick(game.id)">
+                  <div [routerLink]="['/Recommended',game.id]">
                     <img  class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
                     <div class="text-center"> 
                     <p class="gameTitle">{{game.title}}</p>
