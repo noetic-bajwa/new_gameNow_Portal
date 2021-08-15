@@ -9198,7 +9198,7 @@ export const ALLGAMES = [
         screenshot3_small: "https://whitelabel-cdn.marketjs.com/games/alien-claw-crane/localization/en/media/graphics/promo/screenshots/3.jpg"
         },
         {
-        genres: "Sports,Family,Action",
+        genres: "",
         screenshot2_small: "https://whitelabel-cdn.marketjs.com/games/slam-dunk-forever/localization/en/media/graphics/promo/screenshots/2.jpg",
         plays: 15,
         language: "en",

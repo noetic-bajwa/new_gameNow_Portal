@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { CarouselComponent } from './dashboard/home-content/carousel/carousel.component';
 import { CategoryComponent } from './dashboard/home-content/category/category.component';
 import { GamePlayComponent } from './dashboard/home-content/game-play/game-play.component';
 import { HomeContentComponent } from './dashboard/home-content/home-content.component';
@@ -18,7 +17,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
