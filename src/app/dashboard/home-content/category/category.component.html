@@ -3,14 +3,12 @@
     <div class="row" style="justify-content: center;">
         <div  class="col text-center">
         
-            <h5   class="myHeading"><i routerLink="/" class="fa fa-chevron-left myChevronLeft"></i>{{category}} Games</h5>
+            <h5   class="myHeading"><i routerLink="" class="fa fa-chevron-left myChevronLeft"></i>{{category}} Games</h5>
             
-        
         </div>
     </div>
     
     <div class="row" style="justify-content: center;" >
- 
             <ng-container  *ngFor="let game of AllGames;">
               <div class="col-12 col-md-4 col-lg-4" *ngIf="game.genres.includes(category)">
                 <div [routerLink]="[game.id]">

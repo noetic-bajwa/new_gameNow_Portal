@@ -39,7 +39,7 @@
             >
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Feature')">
-                <div [routerLink]="['/Feature',game.id]">
+                <div  [routerLink]="['/Feature',game.id]">
                   <img  class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                   
                   <div class="text-center">   

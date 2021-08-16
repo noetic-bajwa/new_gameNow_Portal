@@ -14,7 +14,12 @@
             <ng-container  *ngFor="let game of AllGames;">
               <div class="col-12 col-md-4 col-lg-4" *ngIf="game.id.includes(gameId)">
                 <div >
-                  <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                    <!-- <iframe [src]="urlSafe(game.url)">
+
+                    </iframe> -->
+                  
+                  
+                    <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
                   </div> 
