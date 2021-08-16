@@ -17,7 +17,7 @@ body {
   }
   @import 'swiper-bundle.min.css';
   @import 'swiper/components/pagination/pagination';
-  
+  @import "swiper/components/lazy/lazy";
 
   .owl-theme .owl-nav [class*=owl-] {
     color: rgb(187, 57, 57);
