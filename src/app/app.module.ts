@@ -7,7 +7,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './dashboard/header/header.component';
 import { FooterComponent } from './dashboard/footer/footer.component';
 import { HomeContentComponent } from './dashboard/home-content/home-content.component';
-import { CarouselComponent } from './dashboard/home-content/carousel/carousel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SwiperModule } from 'swiper/angular';
@@ -22,7 +21,6 @@ import { GamePlayComponent } from './dashboard/home-content/game-play/game-play.
     HeaderComponent,
     FooterComponent,
     HomeContentComponent,
-    CarouselComponent,
     CategoryComponent,
     GamePlayComponent,
   ],

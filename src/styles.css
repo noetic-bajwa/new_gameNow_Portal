@@ -87,3 +87,77 @@ body {
   flex-direction: inherit;
 }
 
+
+
+@font-face{
+  font-family:"EvolveSansThin";
+  src:local("EvolveSansThin"),url(/assets/Fonts/MADE_Evolve_Sans_Thin.otf) format("truetype");
+}
+
+@font-face{
+  font-family:"EvolveSansRegularEVO";
+  src:local("EvolveSansRegularEVO"),url(/assets/Fonts/MADE_Evolve_Sans_Regular_EVO.otf) format("truetype");
+}
+
+@font-face{
+  font-family:"EvolveSansMedium";
+  src:local("EvolveSansMedium"),url(/assets/Fonts/MADE_Evolve_Sans_Medium.otf) format("truetype");
+}
+
+@font-face{
+  font-family:"EvolveSansBold";
+  src:local("EvolveSansBold"),url(/assets/Fonts/MADE_Evolve_Sans_Bold.otf) format("truetype");
+}
+      
+     
+.myHeading{
+  font-family:"EvolveSansThin";
+  letter-spacing: 0.1em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #c0302d;
+  color: white;
+  justify-content: center;
+  
+}
+
+
+.gameTitle{
+  font-family:"EvolveSansThin";
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight:bold;
+}
+
+
+.myChevronRight{
+  float: right;
+  margin: auto;
+}
+
+.myChevronLeft{
+  float: left;
+  margin: auto;
+}
+
+.myGameIcon{
+  float: left;
+  margin: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .myHeading {
+      font-size: 20px;
+  }
+  .gameTitle{
+      font-size: 14px;
+  }
+}
+
+.card-img-top{
+  border-radius: 0 !important;
+}
+
+
+

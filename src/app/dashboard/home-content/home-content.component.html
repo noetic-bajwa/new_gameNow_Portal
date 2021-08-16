@@ -8,7 +8,7 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Feature']"  class="myHeading"><i class="fa fa-bookmark myGameIcon"></i>FEATURED GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Feature']"  class="myHeading"><i class="fa fa-bookmark myGameIcon"></i>FEATURED GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
                 
             
             </div>
@@ -67,7 +67,7 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/LeaderBoard']"  class="myHeading"><i class="fa fa-trophy myGameIcon"></i>LEADERBOARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/LeaderBoard']"  class="myHeading"><i class="fa fa-trophy myGameIcon"></i>LEADERBOARD GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
@@ -123,7 +123,7 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Popular']"  class="myHeading"><i class="fa fa-star myGameIcon"></i>POPULAR GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Popular']"  class="myHeading"><i class="fa fa-star myGameIcon"></i>POPULAR GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
@@ -192,7 +192,7 @@
         <div class="col-12 col-md-4 col-lg-4 " data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Action']"  class="myHeading"><i class="fa fa-crosshairs myGameIcon"></i>ACTION GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Action']"  class="myHeading"><i class="fa fa-crosshairs myGameIcon"></i>ACTION GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
@@ -234,29 +234,30 @@
         <div class="col-12 col-md-4 col-lg-4 " data-aos="">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Adventure']" class="myHeading"><i class="fa fa-hiking myGameIcon"></i>ADVENTURE GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Adventure']" class="myHeading"><i class="fa fa-hiking myGameIcon"></i>ADVENTURE GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
-                [effect]="'cube'"
-                [grabCursor]="true"
-                [loop]="true"
-                [autoplay]="{
-                delay: 300000,
-                disableOnInteraction: true
-                }"
-                [cubeEffect]="{
-                shadow: false,
-                slideShadows: false,
-                shadowOffset: 20,
-                shadowScale: 0.94
-                }"
-                [pagination]="{
-                    dynamicBullets: true,
-                    clickable: true
-                  }"
-                class=""
-            >
+            [loop]="true"
+            [effect]="'flip'"
+            [grabCursor]="true"
+            [pagination]="true"
+            [navigation]="true"
+            [flipEffect]="{
+              slideShadows: false
+            }"
+
+            [autoplay]="{
+              delay: 300000,
+              disableOnInteraction: true
+            }"
+            [pagination]="{
+                dynamicBullets: true,
+                clickable: true
+              }"
+            class=""
+          
+          >
           <ng-container *ngFor="let game of AllGames;">
             <ng-template swiperSlide *ngIf="game.genres.includes('Adventure')">
               <div [routerLink]="['/Adventure',game.id]">
@@ -275,7 +276,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Board']" class="myHeading"><i class="fa fa-dice myGameIcon"></i>BOARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Board']" class="myHeading"><i class="fa fa-dice myGameIcon"></i>BOARD GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
@@ -325,7 +326,7 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Sports']"  class="myHeading"><i class="fa fa-table-tennis myGameIcon"></i>SPORTS GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Sports']"  class="myHeading"><i class="fa fa-table-tennis myGameIcon"></i>SPORTS GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
@@ -384,7 +385,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Card']"  class="myHeading"><i class="fa fa-border-all myGameIcon"></i>CARD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Card']"  class="myHeading"><i class="fa fa-border-all myGameIcon"></i>CARD GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
@@ -424,7 +425,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Educational']"  class="myHeading"><i class="fa fa-book-reader myGameIcon"></i>EDUCATIONAL GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Educational']"  class="myHeading"><i class="fa fa-book-reader myGameIcon"></i>EDUCATIONAL GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
@@ -466,7 +467,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Family']"  class="myHeading"><i class="fa fa-heart myGameIcon"></i>FAMILY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Family']"  class="myHeading"><i class="fa fa-heart myGameIcon"></i>FAMILY GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
@@ -516,7 +517,7 @@
         <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Strategy']"  class="myHeading"><i class="fa fa-hourglass-start myGameIcon"></i>STRATEGY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Strategy']"  class="myHeading"><i class="fa fa-hourglass-start myGameIcon"></i>STRATEGY GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
@@ -572,7 +573,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Memory']"  class="myHeading"><i class="fa fa-brain myGameIcon"></i>MEMORY GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Memory']"  class="myHeading"><i class="fa fa-brain myGameIcon"></i>MEMORY GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
@@ -612,7 +613,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Word']"  class="myHeading"><i class="fa fa-book myGameIcon"></i>WORD GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Word']"  class="myHeading"><i class="fa fa-book myGameIcon"></i>WORD GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
@@ -654,7 +655,7 @@
         <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Multiplayer']"  class="myHeading"><i class="fa fa-user-friends myGameIcon"></i>MULTIPLAYER GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Multiplayer']"  class="myHeading"><i class="fa fa-user-friends myGameIcon"></i>MULTIPLAYER GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
@@ -703,7 +704,7 @@
         <div class="col-12 col-md-4 col-lg-12" data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Puzzle']"  class="myHeading"><i class="fa fa-puzzle-piece myGameIcon"></i>PUZZLE GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Puzzle']"  class="myHeading"><i class="fa fa-puzzle-piece myGameIcon"></i>PUZZLE GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
@@ -763,7 +764,7 @@
         <div class="col-12 col-md-4 col-lg-12" data-aos=" ">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Recommended']"  class="myHeading"><i class="fa fa-thumbs-up myGameIcon"></i>RECOMMENDED GAMES <i class="fa fa-chevron-right myChevron"></i></h5>
+                <h5 [routerLink]="['/Recommended']"  class="myHeading"><i class="fa fa-thumbs-up myGameIcon"></i>RECOMMENDED GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
             
             </div>
             <swiper
