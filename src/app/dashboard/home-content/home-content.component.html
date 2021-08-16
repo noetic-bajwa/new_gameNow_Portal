@@ -1,16 +1,12 @@
-
-
-
  <div class="container" style="overflow-x: hidden;overflow-y:hidden;">
     
     <div class="row" style="justify-content: center;" >
 
-        <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
+        <div class="col-12 col-md-12 col-lg-12" data-aos="">
             <div class="text-center">
         
-                <h5 [routerLink]="['/Feature']"  class="myHeading"><i class="fa fa-bookmark myGameIcon"></i>FEATURED GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
+                <h5 [routerLink]="['/Feature']"  class="myHeading"><i class="fa fa-bookmark myGameIcon"></i>FEATURED GAMES<i class="fa fa-chevron-right myChevronRight"></i></h5>
                 
-            
             </div>
             <swiper
             [slidesPerView]="2"
@@ -44,13 +40,16 @@
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Feature')">
                 <div [routerLink]="['/Feature',game.id]">
-                  <img  class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                  <img  class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                   
                   <div class="text-center">   
                       <p class="gameTitle">{{game.title}}</p>
                   </div> 
                   </div>
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+                  
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+
+                  </div> 
                    
             </ng-template>
             </ng-container>
@@ -67,7 +66,7 @@
     
     <div class="row" style="justify-content: center;" >
 
-        <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
+        <div class="col-12 col-md-12 col-lg-12" data-aos="">
             <div class="text-center">
         
                 <h5 [routerLink]="['/LeaderBoard']"  class="myHeading"><i class="fa fa-trophy myGameIcon"></i>LEADERBOARD GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
@@ -105,12 +104,12 @@
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('LeaderBoard')">
                 <div [routerLink]="['/LeaderBoard',game.id]">
-                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
                   </div> 
                   </div>
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div>  
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center" ></div>  
             </ng-template>
             </ng-container>
             </swiper>
@@ -125,7 +124,7 @@
     
     <div class="row" style="justify-content: center;" >
 
-        <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
+        <div class="col-12 col-md-12 col-lg-12" data-aos="">
             <div class="text-center">
         
                 <h5 [routerLink]="['/Popular']"  class="myHeading"><i class="fa fa-star myGameIcon"></i>POPULAR GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
@@ -163,12 +162,12 @@
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Popular')">
                 <div [routerLink]="['/Popular',game.id]">
-                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
                   </div> 
                   </div> 
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center" ></div> 
             </ng-template>
             </ng-container>
             </swiper>
@@ -183,7 +182,7 @@
 
     <div class="row" style="justify-content: center;">
   
-        <div class="col-12 col-md-4 col-lg-4 " data-aos=" ">
+        <div class="col-12 col-md-4 col-lg-4 " data-aos="">
             <div class="text-center">
         
                 <h5 [routerLink]="['/Action']"  class="myHeading"><i class="fa fa-crosshairs myGameIcon"></i>ACTION GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
@@ -214,12 +213,12 @@
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Action')">
                 <div [routerLink]="['/Action',game.id]">
-                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
                   </div> 
                 </div> 
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center" ></div> 
             </ng-template>
             </ng-container>
             </swiper>
@@ -258,19 +257,19 @@
           <ng-container *ngFor="let game of AllGames;">
             <ng-template swiperSlide *ngIf="game.genres.includes('Adventure')">
               <div [routerLink]="['/Adventure',game.id]">
-                <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                 <div class="text-center"> 
                     <p class="gameTitle">{{game.title}}</p>
                 </div>  
               </div>
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center" ></div> 
           </ng-template>
           </ng-container>
             </swiper>
         </div>
 
         
-        <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
+        <div class="col-12 col-md-4 col-lg-4" data-aos="">
             <div class="text-center">
         
                 <h5 [routerLink]="['/Board']" class="myHeading"><i class="fa fa-dice myGameIcon"></i>BOARD GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
@@ -300,12 +299,12 @@
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Board')">
                 <div [routerLink]="['/Board',game.id]">
-                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
                   </div>  
                 </div>
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center" ></div> 
             </ng-template>
             </ng-container>
             </swiper>
@@ -322,7 +321,7 @@
     <div class="row" style="justify-content: center;">
 
         
-        <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
+        <div class="col-12 col-md-12 col-lg-12" data-aos="">
             <div class="text-center">
         
                 <h5 [routerLink]="['/Sports']"  class="myHeading"><i class="fa fa-table-tennis myGameIcon"></i>SPORTS GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
@@ -357,12 +356,12 @@
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Sports')">
                 <div [routerLink]="['/Sports',game.id]">
-                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
                   </div> 
                   </div> 
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center" ></div> 
             </ng-template>
             </ng-container>
             </swiper>
@@ -382,7 +381,7 @@
     
     <div class="row" style="justify-content: center;">
 
-        <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
+        <div class="col-12 col-md-4 col-lg-4" data-aos="">
             <div class="text-center">
         
                 <h5 [routerLink]="['/Card']"  class="myHeading"><i class="fa fa-border-all myGameIcon"></i>CARD GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
@@ -412,19 +411,19 @@
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Card')">
                 <div [routerLink]="['/Card',game.id]">
-                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
                   </div> 
                 </div> 
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center" ></div> 
             </ng-template>
             </ng-container>
             </swiper>
         </div>
 
         
-        <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
+        <div class="col-12 col-md-4 col-lg-4" data-aos="">
             <div class="text-center">
         
                 <h5 [routerLink]="['/Educational']"  class="myHeading"><i class="fa fa-book-reader myGameIcon"></i>EDUCATIONAL GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
@@ -455,19 +454,19 @@
           <ng-container *ngFor="let game of AllGames;">
             <ng-template swiperSlide *ngIf="game.genres.includes('Educational')">
               <div [routerLink]="['/Educational',game.id]">
-                <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                 <div class="text-center"> 
                     <p class="gameTitle">{{game.title}}</p>
                 </div> 
               </div> 
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center" ></div> 
           </ng-template>
           </ng-container>
             </swiper>
         </div>
 
 
-        <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
+        <div class="col-12 col-md-4 col-lg-4" data-aos="">
             <div class="text-center">
         
                 <h5 [routerLink]="['/Family']"  class="myHeading"><i class="fa fa-heart myGameIcon"></i>FAMILY GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
@@ -497,12 +496,12 @@
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Family')">
                 <div [routerLink]="['/Family',game.id]">
-                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
                   </div> 
                 </div> 
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center" ></div> 
             </ng-template>
             </ng-container>
             </swiper>
@@ -519,7 +518,7 @@
     <div class="row" style="justify-content: center;" >
 
         
-        <div class="col-12 col-md-12 col-lg-12" data-aos=" ">
+        <div class="col-12 col-md-12 col-lg-12" data-aos="">
             <div class="text-center">
         
                 <h5 [routerLink]="['/Strategy']"  class="myHeading"><i class="fa fa-hourglass-start myGameIcon"></i>STRATEGY GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
@@ -554,12 +553,12 @@
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Strategy')">
                 <div [routerLink]="['/Strategy',game.id]">
-                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
                   </div>  
                 </div>
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center" ></div> 
             </ng-template>
             </ng-container>
             </swiper>
@@ -572,7 +571,7 @@
     
     <div class="row" style="justify-content: center;">
 
-        <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
+        <div class="col-12 col-md-4 col-lg-4" data-aos="">
             <div class="text-center">
         
                 <h5 [routerLink]="['/Memory']"  class="myHeading"><i class="fa fa-brain myGameIcon"></i>MEMORY GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
@@ -602,19 +601,19 @@
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Memory')">
                 <div [routerLink]="['/Memory',game.id]">
-                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
                   </div>  
                 </div>
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center" ></div> 
             </ng-template>
             </ng-container>
             </swiper>
         </div>
 
         
-        <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
+        <div class="col-12 col-md-4 col-lg-4" data-aos="">
             <div class="text-center">
         
                 <h5 [routerLink]="['/Word']"  class="myHeading"><i class="fa fa-book myGameIcon"></i>WORD GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
@@ -646,19 +645,19 @@
           <ng-container *ngFor="let game of AllGames;">
             <ng-template swiperSlide *ngIf="game.genres.includes('Word')">
               <div [routerLink]="['/Word',game.id]">
-                <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                 <div class="text-center"> 
                     <p class="gameTitle">{{game.title}}</p>
                 </div>  
                 </div>
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center" ></div> 
           </ng-template>
           </ng-container>
             </swiper>
         </div>
 
         
-        <div class="col-12 col-md-4 col-lg-4" data-aos=" ">
+        <div class="col-12 col-md-4 col-lg-4" data-aos="">
             <div class="text-center">
         
                 <h5 [routerLink]="['/Multiplayer']"  class="myHeading"><i class="fa fa-user-friends myGameIcon"></i>MULTIPLAYER GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
@@ -688,12 +687,12 @@
             <ng-container *ngFor="let game of AllGames;">
               <ng-template swiperSlide *ngIf="game.genres.includes('Multiplayer')">
                 <div [routerLink]="['/Multiplayer',game.id]">
-                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
                   </div>  
                 </div>
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center" ></div> 
             </ng-template>
             </ng-container>
             </swiper>
@@ -709,7 +708,7 @@
     <div class="row" style="justify-content: center;" >
 
         
-        <div class="col-12 col-md-4 col-lg-12" data-aos=" ">
+        <div class="col-12 col-md-4 col-lg-12" data-aos="">
             <div class="text-center">
         
                 <h5 [routerLink]="['/Puzzle']"  class="myHeading"><i class="fa fa-puzzle-piece myGameIcon"></i>PUZZLE GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
@@ -744,12 +743,12 @@
             <ng-container *ngFor="let game of AllGames;">
               <ng-template  swiperSlide *ngIf="game.genres.includes('Puzzle')">
                 <div [routerLink]="['/Puzzle',game.id]">
-                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                  <img class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
                   </div> 
                 </div> 
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center" ></div> 
             </ng-template>
             </ng-container>
             </swiper>
@@ -767,7 +766,7 @@
     <div class="row" style="justify-content: center;" >
 
         
-        <div class="col-12 col-md-4 col-lg-12" data-aos=" ">
+        <div class="col-12 col-md-4 col-lg-12" data-aos="">
             <div class="text-center">
         
                 <h5 [routerLink]="['/Recommended']"  class="myHeading"><i class="fa fa-thumbs-up myGameIcon"></i>RECOMMENDED GAMES <i class="fa fa-chevron-right myChevronRight"></i></h5>
@@ -802,12 +801,12 @@
             <ng-container *ngFor="let game of AllGames;">
               <ng-template  swiperSlide *ngIf="game.genres.includes('Recommended')">
                   <div [routerLink]="['/Recommended',game.id]">
-                    <img  class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner Medium">  
+                    <img  class="card-img-top swiper-lazy"  [attr.data-src]="game.banner_medium" alt="Game Banner">  
                     <div class="text-center"> 
                     <p class="gameTitle">{{game.title}}</p>
                   </div> 
                   </div> 
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-black text-center" style="margin: auto;"></div> 
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white text-center"  ></div> 
             </ng-template>
             </ng-container>
             </swiper>
