@@ -1,0 +1,59 @@
+<div class="container" style="overflow-x: hidden;overflow-y:hidden;">
+    
+    <div class="row" style="justify-content: center;" >
+
+        <div class="col-12 col-md-12 col-lg-12" data-aos="">
+            <div class="text-center">
+        
+                <h5 [routerLink]="[category]"  class="myHeading"><i class="fa fa-{{icon}} myGameIcon"></i>{{title}}<i class="fa fa-chevron-right myChevronRight"></i></h5>
+                
+            </div>
+            <swiper
+            [slidesPerView]="1"
+            [slidesPerColumn]="1"
+            [loop]="false"
+            [spaceBetween]=""
+            [lazy]="true"
+            [pagination]="{
+                dynamicBullets: true,
+                clickable: true
+              }"
+              [breakpoints]="{
+                '640': {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                  slidesPerColumn:1
+                },
+                '768': {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                  slidesPerColumn:1
+                },
+                '1024': {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                  slidesPerColumn:1
+                }
+              }"
+            class=""
+            >
+            <ng-container *ngFor="let game of AllGames;">
+              <ng-template  swiperSlide *ngIf="game.genres.includes(category)">
+                <div  [routerLink]="['/{{category}}',game.id]">
+                  <img [lazyLoad]="game.banner_medium" class="card-img-top swiper-lazy"  alt="Game Banner">  
+                  
+                  <div class="text-center">   
+                      <p class="gameTitle">{{game.title}}</p>
+                  </div> 
+                  </div>
+                  
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+
+                  </div> 
+                   
+            </ng-template>
+            </ng-container>
+            </swiper>
+        </div>
+    </div>
+</div>
