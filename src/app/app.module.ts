@@ -13,10 +13,9 @@ import { SwiperModule } from 'swiper/angular';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
 import { CategoryComponent } from './dashboard/home-content/category/category.component';
 import { GamePlayComponent } from './dashboard/home-content/game-play/game-play.component';
-import { FlprGamesComponent } from './dashboard/home-content/flpr-games/flpr-games.component';
-import { LazyImgDirective } from './lazy-img.directive';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { CategoryGamesComponent } from './dashboard/home-content/category-games/category-games.component';
+import { GameTemplateComponent } from './dashboard/home-content/game-template/game-template.component';
+
 
 @NgModule({
   declarations: [
@@ -27,9 +26,9 @@ import { CategoryGamesComponent } from './dashboard/home-content/category-games/
     HomeContentComponent,
     CategoryComponent,
     GamePlayComponent,
-    FlprGamesComponent,
-    LazyImgDirective,
-    CategoryGamesComponent,
+    GameTemplateComponent
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -42,7 +41,7 @@ import { CategoryGamesComponent } from './dashboard/home-content/category-games/
     LazyLoadImageModule
 
   ],
-  providers: [LazyImgDirective],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

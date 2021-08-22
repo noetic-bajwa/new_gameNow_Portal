@@ -37,13 +37,15 @@
               }"
             class=""
             >
-            <ng-container *ngFor="let game of AllGames;">
-              <ng-template  swiperSlide *ngIf="game.genres.includes(category)">
-                <div  [routerLink]="['/{{category}}',game.id]">
+            <ng-container *ngFor="let game of AllGames;let last=last">
+              <ng-template  swiperSlide >
+                <div   [routerLink]="['/{{category}}',game.id]">
                   <img [lazyLoad]="game.banner_medium" class="card-img-top swiper-lazy"  alt="Game Banner">  
                   
-                  <div class="text-center">   
+                  <div class="text-center">  
+                    
                       <p class="gameTitle">{{game.title}}</p>
+                      <div *ngIf='last' [routerLink]="[category]" class="centered">View More</div>
                   </div> 
                   </div>
                   
@@ -57,3 +59,4 @@
         </div>
     </div>
 </div>
+

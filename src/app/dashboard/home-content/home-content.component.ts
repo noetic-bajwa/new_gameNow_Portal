@@ -3,12 +3,11 @@ import { DataService } from '../../services/data.service';
 import { AuthenticationGuard } from '../../authentication.guard';
 
 
-import { ALLGAMES } from 'src/app/GAMES/allGames';
+// import { ALLGAMES } from 'src/app/GAMES/allGames';
 
+// import SwiperCore, {Lazy,  Autoplay, EffectCoverflow,EffectCube,EffectFlip, Pagination } from "swiper/core";
 
-import SwiperCore, {Lazy,  Autoplay, EffectCoverflow,EffectCube,EffectFlip, Pagination } from "swiper/core";
-
-SwiperCore.use([Lazy, Autoplay,EffectCube,EffectCoverflow,EffectFlip, Pagination]);
+// SwiperCore.use([Lazy, Autoplay,EffectCube,EffectCoverflow,EffectFlip, Pagination]);
 
 declare let AOS: any;
 
@@ -22,15 +21,18 @@ export class HomeContentComponent implements OnInit {
   
   
   
-  AllGames = ALLGAMES;
+  // AllGames = ALLGAMES;
   
   constructor( private gamesData:DataService,private authService:AuthenticationGuard) { 
-    console.log(this.AllGames[0].genres)
+    // console.log(this.AllGames[0].genres)
   }
+
+
 
   permission = this.authService.canActivate();
   ngOnInit(): void {
     // console.log(this.AllGames)
+    // console.log(this.gamesData.getFeaturedGames());
     AOS.init();
     console.log(this.permission);
     // this.gamesData.getData().subscribe(

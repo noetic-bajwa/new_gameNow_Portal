@@ -1,0 +1,19 @@
+@font-face{
+    font-family:"EvolveSansMedium";
+    src:local("EvolveSansMedium"),url(/assets/Fonts/MADE_Evolve_Sans_Medium.otf) format("truetype");
+  }
+
+  .centered {
+    font-family:"EvolveSansMedium";
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c0302d;
+    opacity: 90%;
+    padding:10px;
+    color: white;
+    border: 2px solid #8a252c;
+    
+  }
+  
