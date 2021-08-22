@@ -11,8 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SwiperModule } from 'swiper/angular';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
-import { CategoryComponent } from './dashboard/home-content/category/category.component';
-import { GamePlayComponent } from './dashboard/home-content/game-play/game-play.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { GameTemplateComponent } from './dashboard/home-content/game-template/game-template.component';
 
@@ -24,8 +22,6 @@ import { GameTemplateComponent } from './dashboard/home-content/game-template/ga
     HeaderComponent,
     FooterComponent,
     HomeContentComponent,
-    CategoryComponent,
-    GamePlayComponent,
     GameTemplateComponent
     
     
