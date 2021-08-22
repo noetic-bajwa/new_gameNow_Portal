@@ -39,7 +39,7 @@
             >
             <ng-container *ngFor="let game of AllGames;let last=last">
               <ng-template  swiperSlide >
-                <div   [routerLink]="['/{{category}}',game.id]">
+                <div   [routerLink]="[category,game.id]">
                   <img [lazyLoad]="game.banner_medium" class="card-img-top swiper-lazy"  alt="Game Banner">  
                   
                   <div class="text-center">  

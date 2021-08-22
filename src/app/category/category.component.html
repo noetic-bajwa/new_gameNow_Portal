@@ -12,7 +12,7 @@
             <ng-container  *ngFor="let game of AllGames;">
               <div class="col-12 col-md-4 col-lg-4" *ngIf="game.genres.includes(category)">
                 <div [routerLink]="[game.id]">
-                  <img class="card-img-top"  src="{{game.banner_medium}}" alt="Game Banner Medium">  
+                  <img class="card-img-top"  [lazyLoad]="game.banner_medium" alt="Game Banner Medium">  
                   <div class="text-center"> 
                       <p class="gameTitle">{{game.title}}</p>
                   </div> 

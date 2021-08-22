@@ -160,4 +160,23 @@ body {
   border-radius: 0 !important;
 }
 
+.nav-link{
+  padding: 5px;
+  margin: 10px 10px;
+  font-family:"EvolveSansThin";
+  /* margin-top: 25px; */
+  /* margin-bottom: 30px; */
+  /* font-weight:bold; */
+  font-size: 15px;
+  color: #ffffff;
+  border: 1px solid white;
+  background-color: #8a252c;
+}
 
+.nav-link:hover{
+  
+  color: #ffffff;;
+  border: 1px solid white;
+  background-color: #c0302d;
+  text-decoration: underline;
+}
