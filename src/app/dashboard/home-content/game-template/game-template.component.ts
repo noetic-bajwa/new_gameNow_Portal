@@ -35,7 +35,9 @@ AllGames:any;
   
   permission = this.authService.canActivate();
   ngOnInit(): void {
+    console.log('Above')
     this.AllGames=ALLGAMES.filter(word => word.genres.includes(this.category)).slice(0,5);
+    console.log('Below')
     // this.AllGames=this.gamesData.getGames();
     // console.log(this.AllGames);
     // console.log(this.AllGames)
