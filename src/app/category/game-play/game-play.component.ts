@@ -10,11 +10,14 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class GamePlayComponent implements OnInit {
   gameId:any;
+  AllGames:any;
+  Url:any;
   
-  AllGames=ALLGAMES;
   constructor(private route: ActivatedRoute,public sanitizer: DomSanitizer) {
     this.route.paramMap.subscribe(params => {
       this.gameId = (params.get('gameId'));
+      this.AllGames=ALLGAMES.filter(word => word.id.includes(this.gameId));
+      this.Url = this.sanitizer.bypassSecurityTrustResourceUrl(this.AllGames[0].url);
       
     })
    }
