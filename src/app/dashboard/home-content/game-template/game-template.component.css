@@ -16,4 +16,14 @@
     border: 2px solid #8a252c;
     
   }
+
+  .card{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 2px;
+    border-radius: 0px;
+    border-color: #ee696b93;
+    background-color: rgba(255, 255, 255, 0.74);
+    border-width: 0.124rem;
+  
+}
+
   

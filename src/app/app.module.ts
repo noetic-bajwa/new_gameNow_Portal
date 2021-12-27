@@ -13,6 +13,7 @@ import { SwiperModule } from 'swiper/angular';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { GameTemplateComponent } from './dashboard/home-content/game-template/game-template.component';
+import { BannerComponent } from './dashboard/home-content/banner/banner.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { GameTemplateComponent } from './dashboard/home-content/game-template/ga
     HeaderComponent,
     FooterComponent,
     HomeContentComponent,
-    GameTemplateComponent
+    GameTemplateComponent,
+    BannerComponent
     
     
   ],

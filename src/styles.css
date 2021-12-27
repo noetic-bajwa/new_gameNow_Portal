@@ -15,42 +15,16 @@ body {
     min-height: 100%;
     /* overflow-x: hidden;  */
   }
-  @import 'swiper-bundle.min.css';
-  @import 'swiper/components/pagination/pagination';
-  @import "swiper/components/lazy/lazy";
+  
 
-  .owl-theme .owl-nav [class*=owl-] {
-    color: rgb(187, 57, 57);
-    font-size: 14px;
-    margin: 5px;
-    padding: 4px 7px;
-    background: #b7575700 !important;
-    display: inline-block;
-    cursor: pointer;
-    border-radius: 5px;
+  
 
-}
-
-.owl-theme .owl-nav [class*=owl-]:hover {
-  color: #8a252c;
-  font-size: 14px;
-  margin: 5px;
-  padding: 4px 7px;
-  background: #b7575700 !important;
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 5px;
-
-}
 
 .swiper-pagination-bullet-active {
   background-color: #c0302d;
 }
 
-.swiper-pagination{
-  
-  
-}
+
 
 .swiper-button-next{
   color: #8a252c;
@@ -80,11 +54,6 @@ body {
   background-color: none !important;
   box-shadow: none !important;
   /* box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%); */
-}
-
-
-.swiper-container-multirow-column > .swiper-wrapper {
-  flex-direction: inherit;
 }
 
 

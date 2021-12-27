@@ -25,22 +25,13 @@ AllGames:any;
   
   
   constructor( private gamesData:DataService,private authService:AuthenticationGuard) { 
-    // this.AllGames = ALLGAMES.filter(word => word.genres.includes(this.category)).slice(0,2);
-    // console.log(this.AllGames[0].genres)
-     
-    // console.log(this.Games)
-
-    
+   
+ 
   }
   
   permission = this.authService.canActivate();
   ngOnInit(): void {
-    console.log('Above')
     this.AllGames=ALLGAMES.filter(word => word.genres.includes(this.category)).slice(0,5);
-    console.log('Below')
-    // this.AllGames=this.gamesData.getGames();
-    // console.log(this.AllGames);
-    // console.log(this.AllGames)
     AOS.init();
     // console.log(this.permission);
     // this.gamesData.getData().subscribe(

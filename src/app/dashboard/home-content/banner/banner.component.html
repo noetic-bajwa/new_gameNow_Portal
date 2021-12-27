@@ -1,0 +1,42 @@
+<div  style="overflow-x: hidden;overflow-y:hidden;" >
+    
+            <swiper
+            [slidesPerView]="1"
+            [slidesPerColumn]="1"
+            [loop]="true"
+            [spaceBetween]=""
+            [lazy]="true"
+            [pagination]="{
+                dynamicBullets: true,
+                clickable: true
+            }"
+            [breakpoints]="{
+                '640': {
+                  slidesPerView: 1,
+                  spaceBetween: 30,
+                  slidesPerColumn:1
+                },
+                '768': {
+                  slidesPerView: 1,
+                  spaceBetween: 30,
+                  slidesPerColumn:1
+                },
+                '1024': {
+                  slidesPerView: 1,
+                  spaceBetween: 30,
+                  slidesPerColumn:1
+                }
+              }"
+            class=""
+            >
+            <ng-container  *ngFor="let banner of Banners;">
+              <ng-template  swiperSlide >
+                <div>
+                  <img [lazyLoad]="banner.src" class="card-img-top swiper-lazy"  alt="Game Banner">  
+                </div>     
+            </ng-template>
+            </ng-container>
+            </swiper>
+        
+</div>
+
